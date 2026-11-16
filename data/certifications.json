@@ -1,0 +1,187 @@
+{
+    "eyebrow": "CERTIFICATIONS",
+    "heading": "Verified",
+    "headingHighlight": "Credentials.",
+    "subtitle": "A curated collection of verified certifications, professional specializations, and validated technical proficiencies.",
+    "quote": "Learning never exhausts the mind. It only fuels the next goal.",
+    "totalCount": "08+",
+    "totalCountLabel": "ACCREDITED DIPLOMAS",
+    "categories": [
+        "All",
+        "Programming",
+        "Web Development",
+        "Cloud & Tools",
+        "Data & Analytics",
+        "Others"
+    ],
+    "items": [
+        {
+            "id": "neo4j-certified",
+            "title": "Neo4j Certified Professional Program",
+            "issuer": "Neo4j GraphAcademy",
+            "category": "Data & Analytics",
+            "featured": false,
+            "issued": "Issued 2024",
+            "credentialId": "NEO-9824-PR",
+            "credentialUrl": "https://graphacademy.neo4j.com",
+            "description": "Demonstrated expertise in graph data modeling, Cypher query optimization, indexing, and scalable graph traversals.",
+            "skills": [
+                "Cypher",
+                "Graph DB",
+                "Query Optimization",
+                "Data Modeling"
+            ],
+            "brand": "neo4j",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        },
+        {
+            "id": "tata-genai-analytics",
+            "title": "TATA GenAI Powered Data Analytics",
+            "issuer": "TATA Consultancy Services",
+            "category": "Data & Analytics",
+            "featured": false,
+            "issued": "Issued 2024",
+            "credentialId": "TATA-GENAI-412",
+            "credentialUrl": "https://forage-uploads-prod.s3.amazonaws.com",
+            "description": "Explored real-world enterprise applications of generative AI models, business intelligence pipelines, and predictive analytics.",
+            "skills": [
+                "Generative AI",
+                "BI Dashboards",
+                "Predictive Analytics",
+                "Prompting"
+            ],
+            "brand": "tata",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        },
+        {
+            "id": "ibm-python-101",
+            "title": "IBM Python 101 for Data Science",
+            "issuer": "IBM",
+            "category": "Programming",
+            "featured": true,
+            "issued": "Issued 2024",
+            "credentialId": "IBM-PY-8871",
+            "credentialUrl": "https://www.credly.com",
+            "description": "Mastered foundational Python programming, algorithmic problem solving, data structures, and scientific computation workflows.",
+            "skills": [
+                "Python 3",
+                "Data Structures",
+                "NumPy & Pandas",
+                "Algorithms"
+            ],
+            "brand": "ibm",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": "Top Featured"
+        },
+        {
+            "id": "infosys-angular",
+            "title": "Angular Application Architecture",
+            "issuer": "Infosys Springboard",
+            "category": "Web Development",
+            "featured": false,
+            "issued": "Issued 2024",
+            "credentialId": "INFY-SP-7712",
+            "credentialUrl": "https://infyspringboard.onwingspan.com",
+            "description": "Mastered component architecture, reactive state management with RxJS, TypeScript patterns, and robust SPA optimization.",
+            "skills": [
+                "Angular",
+                "TypeScript",
+                "RxJS",
+                "State Management"
+            ],
+            "brand": "infosys",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        },
+        {
+            "id": "hela-blockchain",
+            "title": "Layer-1 Blockchain Specialization",
+            "issuer": "Hela Labs",
+            "category": "Others",
+            "featured": false,
+            "issued": "Issued 2024",
+            "credentialId": "HELA-L1-3390",
+            "credentialUrl": "https://helalabs.com",
+            "description": "Validated core principles of layer-1 architecture, consensus mechanisms, smart contract logic, and decentralized ledgers.",
+            "skills": [
+                "Blockchain",
+                "Smart Contracts",
+                "Consensus",
+                "Web3 Infra"
+            ],
+            "brand": "hela",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        },
+        {
+            "id": "aws-cloud-practitioner",
+            "title": "AWS Cloud Practitioner Essentials",
+            "issuer": "Amazon Web Services",
+            "category": "Cloud & Tools",
+            "featured": false,
+            "issued": "Issued 2024",
+            "credentialId": "AWS-CLD-9102",
+            "credentialUrl": "https://aws.amazon.com",
+            "description": "Covered AWS global infrastructure, core cloud computing services, IAM security, VPC networking, and cost efficiency models.",
+            "skills": [
+                "AWS Cloud",
+                "IAM & VPC",
+                "S3 & EC2",
+                "Cloud Security"
+            ],
+            "brand": "aws",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        },
+        {
+            "id": "meta-frontend",
+            "title": "Meta Frontend Developer Specialization",
+            "issuer": "Meta / Coursera",
+            "category": "Web Development",
+            "featured": false,
+            "issued": "Issued 2023",
+            "credentialId": "META-FE-5541",
+            "credentialUrl": "https://coursera.org",
+            "description": "Completed advanced React workflows, UX design fundamentals, modern CSS grids, state management, and production testing.",
+            "skills": [
+                "React.js",
+                "Modern JavaScript",
+                "UI/UX Grids",
+                "Component Systems"
+            ],
+            "brand": "meta",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        },
+        {
+            "id": "google-data-analytics",
+            "title": "Google Data Analytics Professional",
+            "issuer": "Google",
+            "category": "Data & Analytics",
+            "featured": false,
+            "issued": "Issued 2024",
+            "credentialId": "GGL-DA-2294",
+            "credentialUrl": "https://coursera.org",
+            "description": "Acquired comprehensive skills in SQL querying, R programming, Tableau data visualization, and data-driven decision frameworks.",
+            "skills": [
+                "SQL",
+                "Tableau",
+                "R Programming",
+                "Statistical Analysis"
+            ],
+            "brand": "google",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "badge": ""
+        }
+    ]
+}

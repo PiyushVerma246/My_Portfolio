@@ -4,18 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piyush Verma - Full Stack Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Piyush Verma — Full Stack Developer & Creative Engineer</title>
+    <meta name="description"
+        content="Portfolio of Piyush Verma, Full Stack Developer & AI enthusiast crafting scalable web applications, interactive digital experiences, and intuitive systems.">
+
+    <!-- Inline SVG Favicon (Prevents /favicon.ico 404) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23050505'/><rect x='2' y='2' width='60' height='60' rx='10' fill='none' stroke='%235E8CA8' stroke-width='4'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='26' fill='%23FFFFFF'>PV</text></svg>">
+
+    <!-- Preload Hero Visual Asset (WebP) -->
+    <link rel="preload" as="image" href="assets/hero-sec-background.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Non-Blocking Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&family=Playfair+Display:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Orbitron:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Orbitron:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Consolidated Portfolio Theme & Component Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=black_powder_v16">
 </head>
 
-<body>
+<body class="is-loading">
+    <!-- ==========================================================================
+         ARCHITECTURAL SHUTTER LOADER & MINIMALIST HORIZON
+         Deep Black (#050505), Pure White (#FFFFFF), Dark Powder Blue (#5E8CA8)
+         ========================================================================== -->
+    <div id="dev-loader" class="dev-loader-screen" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="System Initializing" aria-live="polite">
+        <!-- Split Architectural Shutter Panels -->
+        <div class="loader-shutter loader-shutter-top" aria-hidden="true"></div>
+        <div class="loader-shutter loader-shutter-bottom" aria-hidden="true"></div>
+
+        <!-- Ambient Center Glow -->
+        <div class="loader-ambient-glow" aria-hidden="true"></div>
+
+        <!-- Foreground Content Layer -->
+        <div class="loader-content-wrap">
+            <!-- Minimalist Top Navigation -->
+            <header class="loader-header" aria-hidden="true">
+                <div class="loader-id-pill">
+                    <span class="loader-id-dot"></span>
+                    <span class="loader-id-mono">PV // 2026</span>
+                    <span class="loader-id-sep">/</span>
+                    <span class="loader-id-title">PORTFOLIO</span>
+                </div>
+                <button type="button" id="dev-loader-skip" class="loader-skip-pill" aria-label="Skip introductory loading sequence">
+                    <span>SKIP</span>
+                    <span class="loader-key-tag">ESC</span>
+                </button>
+            </header>
+
+            <!-- Center Monolith: Editorial Name & Horizon Laser -->
+            <div class="loader-center-monolith">
+                <div class="loader-badge-tag">
+                    <span class="loader-badge-prefix">//</span>
+                    <span>SYSTEM ARCHITECTURE</span>
+                </div>
+
+                <h1 class="loader-hero-name">
+                    <span class="loader-name-primary">PIYUSH</span><span class="loader-name-accent">Verma</span>
+                </h1>
+
+                <p class="loader-hero-subtitle">
+                    Full-Stack Engineer <span class="loader-hero-dot">&bull;</span> Creative Technologist
+                </p>
+
+                <!-- Precision Horizon Seam & Gliding Spark -->
+                <div class="loader-horizon-assembly">
+                    <div class="loader-track-base">
+                        <div id="dev-loader-bar" class="loader-track-progress" style="width: 0%;"></div>
+                        <div id="loader-spark" class="loader-track-spark" style="left: 0%;"></div>
+                    </div>
+
+                    <!-- Telemetry Sub-Row: Phase Status + Tabular Percentage -->
+                    <div class="loader-telemetry-row">
+                        <div class="loader-status-stream">
+                            <span class="loader-pulse-beacon"></span>
+                            <span id="dev-loader-log" class="loader-status-string">INITIALIZING ENVIRONMENT...</span>
+                        </div>
+                        <div class="loader-metric-display">
+                            <span id="dev-loader-percent" class="loader-metric-value">00</span>
+                            <span class="loader-metric-symbol">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minimalist Bottom Telemetry Baseline -->
+            <footer class="loader-footer" aria-hidden="true">
+                <span class="loader-geo-coord">26.8467&deg; N, 80.9462&deg; E &bull; LUCKNOW, INDIA</span>
+                <span class="loader-copyright">&copy; 2026 PIYUSH VERMA &bull; ALL RIGHTS RESERVED</span>
+            </footer>
+        </div>
+    </div>
+
     <!-- Technical Background Elements -->
-    <div class="tech-bg">
+    <div class="tech-bg" aria-hidden="true">
         <div class="grid-lines"></div>
         <div class="tech-line vertical" style="left: 10%;"></div>
         <div class="tech-line vertical" style="right: 15%;"></div>
@@ -24,865 +113,1251 @@
         <div class="tech-plus" style="top: 50%; left: 5%;">+</div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-brand logo">
+    <!-- Top Horizontal Navigation -->
+    <nav class="navbar" id="top-navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="#home" class="nav-brand logo" title="Piyush Verma — Home" aria-label="Piyush Verma Home">
             <div class="logo-badge">PV</div>
-            <div class="logo-dot"></div>
+            <div class="logo-dot" aria-hidden="true"></div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links desktop-only" id="nav-links">
+            <a href="#about" class="nav-item active">ABOUT</a>
+            <a href="#skills" class="nav-item">SKILLS</a>
+            <a href="#experience" class="nav-item">EXPERIENCE</a>
+            <a href="#projects" class="nav-item">PROJECTS</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
         </div>
-        <div class="nav-links desktop-only">
-            <a href="#about">ABOUT</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#experience">EXPERIENCE</a>
-            <a href="#contact">CONTACT</a>
-        </div>
+
+        <!-- Resume Action Button -->
         <div class="nav-actions desktop-only">
-            <a href="#resume" class="resume-btn">RESUME</a>
+            <a href="https://github.com/PiyushVerma246" target="_blank" rel="noopener noreferrer" class="resume-btn"
+                title="View Resume">RESUME</a>
         </div>
-        <div class="hamburger mobile-only">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="hamburger mobile-only" id="hamburger-btn" aria-label="Toggle Navigation"
+            aria-expanded="false" aria-controls="nav-links">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="eyebrow fade-in-up">— FULL STACK DEVELOPER</div>
                 <h1 class="main-heading fade-in-up delay-1">
                     Hi, I'm<br>
-                    <span class="name-highlight">Piyush Verma.</span>
+                    <span class="name-highlight">PIYUSH<br>VERMA.</span>
                 </h1>
                 <h2 class="tagline fade-in-up delay-2">Building scalable digital experiences.</h2>
                 <p class="description fade-in-up delay-3">
-                    Full-Stack Developer & CS undergrad at SRMCEM. Passionate about building dynamic, user-centric web
+                    Full-Stack Developer &amp; CS undergrad at SRMCEM. Passionate about building dynamic, user-centric
+                    web
                     applications and engineering scalable solutions using modern technologies.
                 </p>
                 <div class="hero-actions fade-in-up delay-4">
-                    <a href="#work" class="btn btn-primary">VIEW MY WORK &rarr;</a>
-                    <a href="#connect" class="btn btn-secondary">LET'S CONNECT</a>
-                </div>
-            </div>
-
-            <div class="hero-visual fade-in delay-5">
-                <div class="portrait-wrapper">
-                    <!-- The user will need to place their portrait image here -->
-                    <img src="assets/hero sec background.jpg" alt="Piyush Verma" class="portrait-img">
-                    <div class="portrait-overlay-left"></div>
-                    <div class="portrait-overlay-bottom"></div>
+                    <a href="#projects" class="btn btn-primary">VIEW MY WORK &rarr;</a>
+                    <a href="#contact" class="btn btn-secondary">LET'S CONNECT</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-tech-section">
-        <div class="section-container">
-            <div class="tech-layout">
-                <!-- Left: Narrative -->
-                <div class="about-narrative scroll-fade-up">
-                    <div class="eyebrow">— 01. ABOUT ME</div>
-                    <h2 class="main-heading">
-                        Engineering<br>
-                        <span class="name-highlight"
-                            style="font-size: 1.8em; text-transform: none; letter-spacing: 0;">Scalable Systems.</span>
+    <!-- ==========================================================================
+         CYBERNETIC SECTION BRIDGE / PAGE BREAK
+         Seamless architectural transition between Hero and Skills
+         ========================================================================== -->
+    <!-- <div class="tech-page-break" aria-hidden="true">
+        <div class="tech-break-container">
+            <div class="tech-break-line left"></div>
+            <div class="tech-break-chip">
+                <span class="tech-break-indicator"></span>
+                <span class="tech-break-label">SYSTEM // DOMAIN EXPLORER</span>
+                <span class="tech-break-code">SEC_02</span>
+            </div>
+            <div class="tech-break-line right"></div>
+        </div>
+        <div class="tech-break-glow"></div>
+    </div> -->
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION (Minimalist Swiss Bento Architecture)
+         Deep Black (#050505), Crisp White (#FFFFFF) & Dark Powder Blue (#5E8CA8)
+         ========================================================================== -->
+    <section class="about-editorial-section" id="about">
+        <div class="container about-ed-container">
+            <!-- Unified Left-Aligned Section Header -->
+            <div class="sec-header about-sec-header" data-ed-reveal>
+                <div class="sec-header-main">
+                    <div class="sec-eyebrow">
+                        <span class="sec-eyebrow-dot" aria-hidden="true"></span>
+                        <span class="sec-count" aria-label="Section 01 of 06">01<span class="sec-count-total">/06</span></span>
+                        <span class="sec-eyebrow-sep" aria-hidden="true">//</span>
+                        <span class="sec-name" id="about-eyebrow-text" data-decrypt="ABOUT ME">ABOUT ME</span>
+                    </div>
+                    <h2 class="sec-title">
+                        <span id="about-heading-main">About</span> <span class="sec-title-accent"
+                            id="about-heading-highlight">Me.</span>
                     </h2>
-                    <p class="description">
-                        I'm a passionate <strong>Full Stack Developer</strong> and B.Tech Computer Science student at
-                        <em>Shri Ramswaroop Memorial College of Engineering and Management</em> ('27).
-                        <br><br>I specialize in building AI-integrated web applications, crafting robust backend
-                        systems, and pushing limits through competitive programming.
+                    <p class="sec-subtitle" id="about-bio-copy">
+                        I&rsquo;m <strong>Piyush</strong>, a developer &amp; CS undergrad crafting fast,
+                        AI-powered web apps where clean architecture meets tactile UI.
                     </p>
                 </div>
 
-                <!-- Right: Technical Data -->
-                <div class="about-data scroll-fade-up delay-2">
-                    <div class="data-block">
-                        <div class="data-label">// STATUS</div>
-                        <div class="data-value">B.Tech CSE Undergrad (2023-2027)</div>
+                <div class="sec-header-aside">
+                    <div class="about-telemetry-card">
+                        <span class="about-telemetry-role" id="about-subrole">FULL-STACK DEVELOPER &middot; CS &rsquo;27</span>
+                        <span class="about-telemetry-loc">
+                            <span class="about-ed-dot" aria-hidden="true"></span>
+                            <span id="about-status-value">LUCKNOW, IN &bull; 26.85&deg; N</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower Contrasting Bento Trio -->
+            <div class="about-bento-grid" id="about-bento-grid">
+                <!-- Card 01: I LIKE -->
+                <article class="about-bento-card is-likes" data-ed-reveal style="--reveal-delay: 80ms;">
+                    <div class="bento-card-head">
+                        <span class="bento-badge-icon" aria-hidden="true">+</span>
+                        <h3 class="bento-head-title">I Like</h3>
+                        <span class="bento-head-index">01</span>
                     </div>
 
-                    <div class="data-block">
-                        <div class="data-label">// ACHIEVEMENTS</div>
-                        <ul class="data-list">
-                            <li><span>[01]</span> 1st Position - Zephyre'24 Hackathon</li>
-                            <li><span>[02]</span> 1st Runner-Up - BitHax'24</li>
-                            <li><span>[03]</span> Shortlisted - Smart India Hackathon</li>
-                        </ul>
+                    <ul class="about-compact-list" id="about-likes-list">
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">+</span>
+                            <span class="compact-label">Tactile UI &amp; Motion</span>
+                        </li>
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">+</span>
+                            <span class="compact-label">Clean APIs &amp; Code</span>
+                        </li>
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">+</span>
+                            <span class="compact-label">Late-Night Debugging</span>
+                        </li>
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">+</span>
+                            <span class="compact-label">Zero-to-One Builds</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Card 02: I DON'T LIKE -->
+                <article class="about-bento-card is-dislikes" data-ed-reveal style="--reveal-delay: 160ms;">
+                    <div class="bento-card-head">
+                        <span class="bento-badge-icon" aria-hidden="true">&times;</span>
+                        <h3 class="bento-head-title">I Don&rsquo;t Like</h3>
+                        <span class="bento-head-index">02</span>
                     </div>
 
-                    <div class="data-block">
-                        <div class="data-label">// LEADERSHIP</div>
-                        <ul class="data-list">
-                            <li><span>[LEAD]</span> Tech Team @ GFG Chapter</li>
-                            <li><span>[LEAD]</span> Events @ AlgoZenith</li>
-                        </ul>
+                    <ul class="about-compact-list" id="about-dislikes-list">
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">&times;</span>
+                            <span class="compact-label">Laggy, Bloated Pages</span>
+                        </li>
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">&times;</span>
+                            <span class="compact-label">Band-Aid Hacks</span>
+                        </li>
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">&times;</span>
+                            <span class="compact-label">Visuals Over UX</span>
+                        </li>
+                        <li class="about-compact-row">
+                            <span class="compact-glyph" aria-hidden="true">&times;</span>
+                            <span class="compact-label">Talk Over Shipping</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Card 03: OFF THE CLOCK -->
+                <article class="about-bento-card is-extra" data-ed-reveal style="--reveal-delay: 240ms;">
+                    <div class="bento-card-head">
+                        <span class="about-wave-eq" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                        </span>
+                        <h3 class="bento-head-title">Off The Clock</h3>
+                        <span class="bento-head-index">03</span>
+                    </div>
+
+                    <dl class="about-vibe-specs" id="about-vibe-list">
+                        <div class="about-vibe-row">
+                            <dt>FUEL</dt>
+                            <dd>Masala Chai</dd>
+                        </div>
+                        <div class="about-vibe-row">
+                            <dt>SOUND</dt>
+                            <dd>Lo-Fi &amp; Synth</dd>
+                        </div>
+                        <div class="about-vibe-row">
+                            <dt>SETUP</dt>
+                            <dd>Dark Mode Only</dd>
+                        </div>
+                    </dl>
+
+                    <p class="about-motto-line" id="about-motto-text">
+                        &ldquo;Keep it simple, make it fast.&rdquo;
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         ARCHITECTURAL SECTION PARTITION 01 -> 02 (About -> Skills)
+         ========================================================================== -->
+    <div class="sec-partition" data-scroll-reveal data-reveal-type="open-scale">
+        <div class="partition-track">
+            <div class="partition-line left">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+            <a href="#skills" class="partition-node" aria-label="Transit to Section 02: Skills">
+                <span class="partition-beacon" aria-hidden="true">
+                    <span class="beacon-core"></span>
+                    <span class="beacon-ring"></span>
+                </span>
+                <span class="partition-index">01 <span class="partition-arr">&rarr;</span> 02</span>
+                <span class="partition-sep" aria-hidden="true">//</span>
+                <span class="partition-tag">SKILLS &amp; ARCHITECTURE</span>
+                <span class="partition-corner tl" aria-hidden="true"></span>
+                <span class="partition-corner tr" aria-hidden="true"></span>
+                <span class="partition-corner bl" aria-hidden="true"></span>
+                <span class="partition-corner br" aria-hidden="true"></span>
+            </a>
+            <div class="partition-line right">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="partition-aura" aria-hidden="true"></div>
+    </div>
+
+    <!-- ==========================================================================
+         SKILLS & TECH WHEEL (Powered by React Bits OptionWheel)
+         Interactive 3D Curved OptionWheel Component
+         ========================================================================== -->
+    <section class="skills-wheel-section" id="skills">
+        <!-- Interactive WebGL2 Particles Backdrop -->
+        <div class="section-particles-bg" id="particles-skills" aria-hidden="true"></div>
+        <div class="container skills-wheel-container">
+            <div class="sec-header" data-scroll-reveal>
+                <div class="sec-header-main">
+                    <div class="sec-eyebrow">
+                        <span class="sec-eyebrow-dot" aria-hidden="true"></span>
+                        <span class="sec-count" aria-label="Section 02 of 06">02<span class="sec-count-total">/06</span></span>
+                        <span class="sec-eyebrow-sep" aria-hidden="true">//</span>
+                        <span class="sec-name">SKILLS</span>
+                    </div>
+                    <h2 class="sec-title">
+                        Skills &amp; <span class="sec-title-accent">Technologies.</span>
+                    </h2>
+                    <p class="sec-subtitle">
+                        Drag, scroll, or use keyboard arrow keys on the curved OptionWheel to explore technical domains,
+                        stacks, and proficiencies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills-wheel-stage">
+                <!-- OptionWheel Mount Node -->
+                <div class="skills-wheel-left" id="skills-option-wheel-root" data-scroll-reveal data-reveal-type="open-scale" style="--reveal-delay: 100ms;"></div>
+
+                <!-- Dynamic Detail Display -->
+                <div class="skills-wheel-details" id="skills-wheel-details-card" data-scroll-reveal data-reveal-type="open-right" style="--reveal-delay: 200ms;">
+                    <div class="wheel-details-header">
+                        <span class="wheel-details-index" id="wheel-item-index">01</span>
+                        <h3 class="wheel-details-title" id="wheel-item-title">Frontend Architecture</h3>
+                    </div>
+                    <p class="wheel-details-desc" id="wheel-item-desc">
+                        Engineering high-performance, component-based user interfaces with modern React ecosystems,
+                        micro-frontends, and fluid animations.
+                    </p>
+                    <div class="wheel-tags-grid" id="wheel-item-tags">
+                        <span class="wheel-tag">React.js</span>
+                        <span class="wheel-tag">Next.js</span>
+                        <span class="wheel-tag">TypeScript</span>
+                        <span class="wheel-tag">TailwindCSS</span>
+                        <span class="wheel-tag">GSAP Motion</span>
+                        <span class="wheel-tag">HTML5 &amp; CSS3</span>
+                    </div>
+                    <div class="wheel-interaction-hint">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 2v20M17 5l-5-3-5 3M17 19l-5 3-5-3" />
+                        </svg>
+                        <span>Drag with mouse / touch, scroll wheel, or arrow keys to rotate</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section (Split Layout) -->
-    <section id="skills" class="skills-split-section">
-        <div class="section-container">
-            <div class="skills-split-layout">
-                <!-- Left: Huge Heading -->
-                <div class="skills-left scroll-fade-up">
-                    <h2 class="massive-heading">
-                        SKILLS<br>
-                        I USE TO<br>
-                        <span class="highlight">CREATE</span><br>
-                        IMPACT.
+    <!-- ==========================================================================
+         ARCHITECTURAL SECTION PARTITION 02 -> 03 (Skills -> Experience)
+         ========================================================================== -->
+    <div class="sec-partition" data-scroll-reveal data-reveal-type="open-scale">
+        <div class="partition-track">
+            <div class="partition-line left">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+            <a href="#experience" class="partition-node" aria-label="Transit to Section 03: Experience">
+                <span class="partition-beacon" aria-hidden="true">
+                    <span class="beacon-core"></span>
+                    <span class="beacon-ring"></span>
+                </span>
+                <span class="partition-index">02 <span class="partition-arr">&rarr;</span> 03</span>
+                <span class="partition-sep" aria-hidden="true">//</span>
+                <span class="partition-tag">EXPERIENCE &amp; EVOLUTION</span>
+                <span class="partition-corner tl" aria-hidden="true"></span>
+                <span class="partition-corner tr" aria-hidden="true"></span>
+                <span class="partition-corner bl" aria-hidden="true"></span>
+                <span class="partition-corner br" aria-hidden="true"></span>
+            </a>
+            <div class="partition-line right">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="partition-aura" aria-hidden="true"></div>
+    </div>
+
+    <!-- ==========================================================================
+         EXPERIENCE & EVOLUTION JOURNEY (Animated Scroll-Linked Vertical Timeline)
+         Deep Black, Pure White & Dark Powder Blue System
+         ========================================================================== -->
+    <section class="journey-experience-section" id="experience">
+        <!-- Inner anchor for #journey compatibility -->
+        <span id="journey" aria-hidden="true" style="position: absolute; top: -80px; visibility: hidden;"></span>
+        <!-- Interactive WebGL2 Particles Backdrop -->
+        <div class="section-particles-bg" id="particles-experience" aria-hidden="true"></div>
+
+        <div class="container journey-container">
+            <!-- Unified Header Row: Left-Aligned Title + Live Chapter HUD Right -->
+            <div class="sec-header journey-header" data-scroll-reveal>
+                <div class="sec-header-main">
+                    <div class="sec-eyebrow">
+                        <span class="sec-eyebrow-dot" aria-hidden="true"></span>
+                        <span class="sec-count" aria-label="Section 03 of 06">03<span class="sec-count-total">/06</span></span>
+                        <span class="sec-eyebrow-sep" aria-hidden="true">//</span>
+                        <span class="sec-name">EXPERIENCE</span>
+                    </div>
+                    <h2 class="sec-title">
+                        Engineering <span class="sec-title-accent">Journey.</span>
                     </h2>
-                    <p class="skills-description">
-                        A blend of creativity, logic, and curiosity — constantly learning, constantly building.
+                    <p class="sec-subtitle">
+                        From core computer science foundations to shipping web products, leading engineering teams, and
+                        scaling multi-community tech events.
                     </p>
                 </div>
 
-                <!-- Right: Skill Bars -->
-                <div class="skills-right">
+                <!-- Live Scroll-Synced Chapter Telemetry -->
+                <div class="journey-hud" data-scroll-reveal data-reveal-type="open-right" style="--reveal-delay: 120ms;" aria-label="Journey progress indicator">
+                    <div class="journey-hud-top">
+                        <span class="journey-hud-kicker">ACTIVE MILESTONE</span>
+                        <span class="journey-hud-badge">
+                            <span id="journey-hud-step">01</span>
+                            <span class="journey-hud-slash">/</span>
+                            <span>05</span>
+                        </span>
+                    </div>
+                    <div class="journey-hud-title" id="journey-hud-label">Foundations · 2023 – 2027</div>
+                    <div class="journey-hud-segments" id="journey-hud-segments" aria-hidden="true">
+                        <span class="journey-hud-seg is-active" data-seg="1"></span>
+                        <span class="journey-hud-seg" data-seg="2"></span>
+                        <span class="journey-hud-seg" data-seg="3"></span>
+                        <span class="journey-hud-seg" data-seg="4"></span>
+                        <span class="journey-hud-seg" data-seg="5"></span>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Frontend -->
-                    <div class="skill-group scroll-fade-up delay-1">
-                        <div class="skill-group-header">
-                            <div class="group-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="3" y1="9" x2="21" y2="9"></line>
-                                    <line x1="9" y1="21" x2="9" y2="9"></line>
-                                </svg>
+            <!-- Interactive Milestone Waypoint Scrubber -->
+            <nav class="journey-waypoints" id="journey-waypoints" aria-label="Jump to experience chapter">
+                <button type="button" class="journey-waypoint is-active" data-target="1">
+                    <span class="wp-idx">01</span>
+                    <span class="wp-label">Foundations</span>
+                </button>
+                <button type="button" class="journey-waypoint" data-target="2">
+                    <span class="wp-idx">02</span>
+                    <span class="wp-label">Travello Build</span>
+                </button>
+                <button type="button" class="journey-waypoint" data-target="3">
+                    <span class="wp-idx">03</span>
+                    <span class="wp-label">Coordinator</span>
+                </button>
+                <button type="button" class="journey-waypoint" data-target="4">
+                    <span class="wp-idx">04</span>
+                    <span class="wp-label">Tech Team Lead</span>
+                </button>
+                <button type="button" class="journey-waypoint" data-target="5">
+                    <span class="wp-idx">05</span>
+                    <span class="wp-label">Scale &amp; Events</span>
+                </button>
+            </nav>
+
+            <!-- Scroll-Driven Vertical Journey Spine + Alternating Chapters -->
+            <div class="journey-timeline-wrap" id="journey-timeline">
+                <!-- Central Spine Track & Animated Scroll Progress Conduit -->
+                <div class="journey-spine-track" aria-hidden="true">
+                    <div class="journey-spine-progress" id="journey-spine-progress"></div>
+                    <div class="journey-spine-packet" aria-hidden="true"></div>
+                    <div class="journey-spine-head" id="journey-spine-head"></div>
+                </div>
+
+                <!-- Chapter 01 (Left) -->
+                <article class="journey-item is-left is-reached is-active" id="exp-card-1" data-index="1"
+                    data-hud-label="Foundations · 2023 – 2027">
+                    <div class="journey-card-col">
+                        <span class="journey-connector" aria-hidden="true"></span>
+                        <div class="journey-card" tabindex="0">
+                            <div class="journey-card-top">
+                                <span class="journey-date-pill">2023 – 2027</span>
+                                <span class="journey-chapter-code">CHAPTER_01</span>
                             </div>
-                            <h3 class="group-title">FRONTEND</h3>
-                        </div>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-name">React.JS</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 85%;"></div>
-                                    <div class="skill-progress-dot" style="left: 85%;"></div>
+                            <div class="journey-role-row">
+                                <div class="journey-icon-badge" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg>
                                 </div>
-                                <div class="skill-percent">85%</div>
+                                <div>
+                                    <h3 class="journey-card-title">B.Tech CSE</h3>
+                                    <div class="journey-card-org">SRMCEM, Lucknow</div>
+                                </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">JavaScript</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 90%;"></div>
-                                    <div class="skill-progress-dot" style="left: 90%;"></div>
-                                </div>
-                                <div class="skill-percent">90%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">HTML & CSS</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 95%;"></div>
-                                    <div class="skill-progress-dot" style="left: 95%;"></div>
-                                </div>
-                                <div class="skill-percent">95%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Tailwind / GSAP</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 80%;"></div>
-                                    <div class="skill-progress-dot" style="left: 80%;"></div>
-                                </div>
-                                <div class="skill-percent">80%</div>
+                            <p class="journey-card-desc">
+                                Started my engineering journey with deep curiosity for algorithms, problem-solving, and
+                                how modern software systems scale from zero to production.
+                            </p>
+                            <div class="journey-chips-row">
+                                <span class="journey-chip">DSA &amp; Core CS</span>
+                                <span class="journey-chip">C++ &amp; Python</span>
+                                <span class="journey-chip">Academic Foundation</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Backend -->
-                    <div class="skill-group scroll-fade-up delay-2">
-                        <div class="skill-group-header">
-                            <div class="group-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                                </svg>
+                    <div class="journey-node-col">
+                        <button type="button" class="journey-node" data-index="1"
+                            aria-label="Chapter 01: B.Tech CSE">
+                            <span class="journey-node-ring" aria-hidden="true"></span>
+                            <span class="journey-node-num">01</span>
+                        </button>
+                    </div>
+
+                    <div class="journey-meta-col" aria-hidden="true">
+                        <span class="journey-ghost-num">01</span>
+                        <span class="journey-phase-tag">// PHASE 01 · LEARN FOUNDATIONS</span>
+                        <p class="journey-phase-quote">Curiosity sparks discipline</p>
+                    </div>
+                </article>
+
+                <!-- Chapter 02 (Right) -->
+                <article class="journey-item is-right" id="exp-card-2" data-index="2"
+                    data-hud-label="First Web Build · Sep – Nov 2023">
+                    <div class="journey-meta-col" aria-hidden="true">
+                        <span class="journey-ghost-num">02</span>
+                        <span class="journey-phase-tag">// PHASE 02 · BUILD PROJECTS</span>
+                        <p class="journey-phase-quote">Turning concepts into interfaces</p>
+                    </div>
+
+                    <div class="journey-node-col">
+                        <button type="button" class="journey-node" data-index="2"
+                            aria-label="Chapter 02: Travello Project">
+                            <span class="journey-node-ring" aria-hidden="true"></span>
+                            <span class="journey-node-num">02</span>
+                        </button>
+                    </div>
+
+                    <div class="journey-card-col">
+                        <span class="journey-connector" aria-hidden="true"></span>
+                        <div class="journey-card" tabindex="0">
+                            <div class="journey-card-top">
+                                <span class="journey-date-pill">SEP 2023 – NOV 2023</span>
+                                <span class="journey-chapter-code">CHAPTER_02</span>
                             </div>
-                            <h3 class="group-title">BACKEND</h3>
+                            <div class="journey-role-row">
+                                <div class="journey-icon-badge" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="journey-card-title">Travello</h3>
+                                    <div class="journey-card-org">Frontend Engineering Project</div>
+                                </div>
+                            </div>
+                            <p class="journey-card-desc">
+                                Built an interactive multi-view travel portal with responsive layouts, modular design
+                                tokens, and smooth client-side navigation from scratch.
+                            </p>
+                            <div class="journey-chips-row">
+                                <span class="journey-chip">Responsive UI</span>
+                                <span class="journey-chip">Modular CSS</span>
+                                <span class="journey-chip">DOM Architecture</span>
+                            </div>
                         </div>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-name">Node.js</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 85%;"></div>
-                                    <div class="skill-progress-dot" style="left: 85%;"></div>
-                                </div>
-                                <div class="skill-percent">85%</div>
+                    </div>
+                </article>
+
+                <!-- Chapter 03 (Left) -->
+                <article class="journey-item is-left" id="exp-card-3" data-index="3"
+                    data-hud-label="Tech Coordinator · Sep 2024 – May 2025">
+                    <div class="journey-card-col">
+                        <span class="journey-connector" aria-hidden="true"></span>
+                        <div class="journey-card" tabindex="0">
+                            <div class="journey-card-top">
+                                <span class="journey-date-pill">SEP 2024 – MAY 2025</span>
+                                <span class="journey-chapter-code">CHAPTER_03</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Express.js</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 85%;"></div>
-                                    <div class="skill-progress-dot" style="left: 85%;"></div>
+                            <div class="journey-role-row">
+                                <div class="journey-icon-badge" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
                                 </div>
-                                <div class="skill-percent">85%</div>
+                                <div>
+                                    <h3 class="journey-card-title">Technical Coordinator</h3>
+                                    <div class="journey-card-org">GeeksforGeeks SRMCEM</div>
+                                </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">REST APIs</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 90%;"></div>
-                                    <div class="skill-progress-dot" style="left: 90%;"></div>
-                                </div>
-                                <div class="skill-percent">90%</div>
+                            <p class="journey-card-desc">
+                                Orchestrated campus hackathons, hands-on workshops, and coding challenges including
+                                Code Charades 3.0, Data Trail, and GitHub Unleashed.
+                            </p>
+                            <div class="journey-chips-row">
+                                <span class="journey-chip">Code Charades 3.0</span>
+                                <span class="journey-chip">Data Trail</span>
+                                <span class="journey-chip">GitHub Unleashed</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Programming & Database -->
-                    <div class="skill-group scroll-fade-up delay-3">
-                        <div class="skill-group-header">
-                            <div class="group-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                                </svg>
+                    <div class="journey-node-col">
+                        <button type="button" class="journey-node" data-index="3"
+                            aria-label="Chapter 03: Technical Coordinator">
+                            <span class="journey-node-ring" aria-hidden="true"></span>
+                            <span class="journey-node-num">03</span>
+                        </button>
+                    </div>
+
+                    <div class="journey-meta-col" aria-hidden="true">
+                        <span class="journey-ghost-num">03</span>
+                        <span class="journey-phase-tag">// PHASE 03 · COORDINATE EVENTS</span>
+                        <p class="journey-phase-quote">Turning peers into builders</p>
+                    </div>
+                </article>
+
+                <!-- Chapter 04 (Right) -->
+                <article class="journey-item is-right" id="exp-card-4" data-index="4"
+                    data-hud-label="Technical Team Lead · Present">
+                    <div class="journey-meta-col" aria-hidden="true">
+                        <span class="journey-ghost-num">04</span>
+                        <span class="journey-phase-tag">// PHASE 04 · LEAD TEAMS</span>
+                        <p class="journey-phase-quote">Automating ecosystems at scale</p>
+                    </div>
+
+                    <div class="journey-node-col">
+                        <button type="button" class="journey-node" data-index="4"
+                            aria-label="Chapter 04: Technical Team Lead">
+                            <span class="journey-node-ring" aria-hidden="true"></span>
+                            <span class="journey-node-num">04</span>
+                        </button>
+                    </div>
+
+                    <div class="journey-card-col">
+                        <span class="journey-connector" aria-hidden="true"></span>
+                        <div class="journey-card is-current" tabindex="0">
+                            <div class="journey-card-top">
+                                <span class="journey-date-pill is-live">
+                                    <span class="journey-live-dot" aria-hidden="true"></span>
+                                    MAY 2025 – PRESENT
+                                </span>
+                                <span class="journey-chapter-code">CHAPTER_04</span>
                             </div>
-                            <h3 class="group-title">PROGRAMMING & DATA</h3>
+                            <div class="journey-role-row">
+                                <div class="journey-icon-badge" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="journey-card-title">Technical Team Lead</h3>
+                                    <div class="journey-card-org">GeeksforGeeks SRMCEM</div>
+                                </div>
+                            </div>
+                            <p class="journey-card-desc">
+                                Leading cross-functional student engineering teams, automating event registrations and
+                                digital certification pipelines, and shipping community web portals.
+                            </p>
+                            <div class="journey-chips-row">
+                                <span class="journey-chip">Team Leadership</span>
+                                <span class="journey-chip">Cert Automation</span>
+                                <span class="journey-chip">Web Portals</span>
+                            </div>
                         </div>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-name">Python</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 80%;"></div>
-                                    <div class="skill-progress-dot" style="left: 80%;"></div>
-                                </div>
-                                <div class="skill-percent">80%</div>
+                    </div>
+                </article>
+
+                <!-- Chapter 05 (Left) -->
+                <article class="journey-item is-left" id="exp-card-5" data-index="5"
+                    data-hud-label="Event Management Lead · Present">
+                    <div class="journey-card-col">
+                        <span class="journey-connector" aria-hidden="true"></span>
+                        <div class="journey-card is-current" tabindex="0">
+                            <div class="journey-card-top">
+                                <span class="journey-date-pill is-live">
+                                    <span class="journey-live-dot" aria-hidden="true"></span>
+                                    OCT 2025 – PRESENT
+                                </span>
+                                <span class="journey-chapter-code">CHAPTER_05</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">C++</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 75%;"></div>
-                                    <div class="skill-progress-dot" style="left: 75%;"></div>
+                            <div class="journey-role-row">
+                                <div class="journey-icon-badge" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                    </svg>
                                 </div>
-                                <div class="skill-percent">75%</div>
+                                <div>
+                                    <h3 class="journey-card-title">Event Management Lead</h3>
+                                    <div class="journey-card-org">AlgoZenith SRMCEM</div>
+                                </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">MongoDB</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 85%;"></div>
-                                    <div class="skill-progress-dot" style="left: 85%;"></div>
-                                </div>
-                                <div class="skill-percent">85%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">MySQL</div>
-                                <div class="skill-progress-track">
-                                    <div class="skill-progress-line" style="width: 80%;"></div>
-                                    <div class="skill-progress-dot" style="left: 80%;"></div>
-                                </div>
-                                <div class="skill-percent">80%</div>
+                            <p class="journey-card-desc">
+                                Directing collegiate and state-level DSA contests, algorithm bootcamps, and technical
+                                symposiums alongside GDG, IEEE, and AI communities.
+                            </p>
+                            <div class="journey-chips-row">
+                                <span class="journey-chip">10+ Tech Events</span>
+                                <span class="journey-chip">DSA Contests</span>
+                                <span class="journey-chip">GDG &amp; IEEE Collabs</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="journey-node-col">
+                        <button type="button" class="journey-node" data-index="5"
+                            aria-label="Chapter 05: Event Management Lead">
+                            <span class="journey-node-ring" aria-hidden="true"></span>
+                            <span class="journey-node-num">05</span>
+                        </button>
+                    </div>
+
+                    <div class="journey-meta-col" aria-hidden="true">
+                        <span class="journey-ghost-num">05</span>
+                        <span class="journey-phase-tag">// PHASE 05 · SCALE IMPACT</span>
+                        <p class="journey-phase-quote">Bridging multi-chapter tech ecosystems</p>
+                    </div>
+                </article>
+
+                <!-- Future Horizon Continuation Cap -->
+                <div class="journey-horizon-cap">
+                    <a href="#projects" class="journey-horizon-pill">
+                        <span class="horizon-pulse" aria-hidden="true"></span>
+                        <span>NEXT VECTOR // EXPLORE BUILT PROJECTS</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="section-container">
-            <div class="section-header scroll-fade-up">
-                <div class="eyebrow">— 02. PROJECTS</div>
-                <div class="section-line"></div>
+    <!-- ==========================================================================
+         ARCHITECTURAL SECTION PARTITION 03 -> 04 (Experience -> Projects)
+         ========================================================================== -->
+    <div class="sec-partition" data-scroll-reveal data-reveal-type="open-scale">
+        <div class="partition-track">
+            <div class="partition-line left">
+                <span class="partition-tick" aria-hidden="true"></span>
             </div>
+            <a href="#projects" class="partition-node" aria-label="Transit to Section 04: Projects">
+                <span class="partition-beacon" aria-hidden="true">
+                    <span class="beacon-core"></span>
+                    <span class="beacon-ring"></span>
+                </span>
+                <span class="partition-index">03 <span class="partition-arr">&rarr;</span> 04</span>
+                <span class="partition-sep" aria-hidden="true">//</span>
+                <span class="partition-tag">FEATURED BUILDS</span>
+                <span class="partition-corner tl" aria-hidden="true"></span>
+                <span class="partition-corner tr" aria-hidden="true"></span>
+                <span class="partition-corner bl" aria-hidden="true"></span>
+                <span class="partition-corner br" aria-hidden="true"></span>
+            </a>
+            <div class="partition-line right">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="partition-aura" aria-hidden="true"></div>
+    </div>
 
-            <div class="projects-showcase">
-                <!-- Project 1 -->
-                <div class="project-showcase-item scroll-fade-up delay-1">
-                    <div class="project-number">01</div>
-                    <div class="project-content">
-                        <div class="project-text">
-                            <div class="project-info">
-                                <h3 class="project-title">CampusSathi</h3>
-                                <div class="project-role">AI Chatbot for Colleges & Offices</div>
-                            </div>
-                            <div class="project-details">
-                                <p class="project-description">
-                                    24×7 RAG-powered AI chatbot for campus support, cutting query response time -70%
-                                    across 500+ queries. Built RESTful APIs for Lost & Found and Announcements, cutting
-                                    manual admin effort -50%.
-                                </p>
-                                <div class="project-tech">
-                                    <span>React.js</span><span>JavaScript</span><span>Python</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank" class="project-link-btn">
-                                        <span>Live Demo</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15 3 21 3 21 9"></polyline>
-                                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" target="_blank" class="project-link-btn outline">
-                                        <span>GitHub</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path
-                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-visual">
-                            <div class="project-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop"
-                                    alt="CampusSathi Preview" class="project-image">
-                                <div class="project-image-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- ==========================================================================
+         FEATURED PROJECT SHOWCASE (Exact Match to User Reference Mockup!)
+         Cream grid paper background, 3-column stage, device frame & polaroid carousel
+         ========================================================================== -->
+    <section class="scrapbook-featured-section" id="projects">
+        <div class="container featured-proj-container">
 
-                <!-- Project 2 -->
-                <div class="project-showcase-item scroll-fade-up delay-2">
-                    <div class="project-number">02</div>
-                    <div class="project-content">
-                        <div class="project-text">
-                            <div class="project-info">
-                                <h3 class="project-title">AniCure</h3>
-                                <div class="project-role">AI Based Animal Rescue and Care System</div>
-                            </div>
-                            <div class="project-details">
-                                <p class="project-description">
-                                    Built CNN injury triage (3 severity tiers) with Haversine-based NGO dispatch.
-                                    Implemented a SHA-256 secured blockchain donation ledger for tamper-proof
-                                    transparency.
-                                </p>
-                                <div class="project-tech">
-                                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span><span>Node.js</span><span>Blockchain</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank" class="project-link-btn">
-                                        <span>Live Demo</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15 3 21 3 21 9"></polyline>
-                                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" target="_blank" class="project-link-btn outline">
-                                        <span>GitHub</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path
-                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-visual">
-                            <div class="project-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1406&auto=format&fit=crop"
-                                    alt="AniCure Preview" class="project-image">
-                                <div class="project-image-overlay"></div>
-                            </div>
-                        </div>
+            <!-- Unified Left-Aligned Section Header -->
+            <div class="sec-header" data-scroll-reveal>
+                <div class="sec-header-main">
+                    <div class="sec-eyebrow">
+                        <span class="sec-eyebrow-dot" aria-hidden="true"></span>
+                        <span class="sec-count" aria-label="Section 04 of 06">04<span class="sec-count-total">/06</span></span>
+                        <span class="sec-eyebrow-sep" aria-hidden="true">//</span>
+                        <span class="sec-name">PROJECTS</span>
                     </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-showcase-item scroll-fade-up delay-3">
-                    <div class="project-number">03</div>
-                    <div class="project-content">
-                        <div class="project-text">
-                            <div class="project-info">
-                                <h3 class="project-title">DevMeet</h3>
-                                <div class="project-role">Developer Networking & Collaboration Platform</div>
-                            </div>
-                            <div class="project-details">
-                                <p class="project-description">
-                                    Built a platform for 1,000+ developers to connect & collaborate on hackathons,
-                                    driving 200+ team formations. Enabled skill-based networking, improving match
-                                    relevance and cutting team formation time by -40%.
-                                </p>
-                                <div class="project-tech">
-                                    <span>React.js</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>MongoDB</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank" class="project-link-btn">
-                                        <span>Live Demo</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15 3 21 3 21 9"></polyline>
-                                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" target="_blank" class="project-link-btn outline">
-                                        <span>GitHub</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path
-                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-visual">
-                            <div class="project-image-wrapper">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop"
-                                    alt="DevMeet Preview" class="project-image">
-                                <div class="project-image-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="sec-title">
+                        Featured <span class="sec-title-accent">Projects.</span>
+                    </h2>
+                    <p class="sec-subtitle">
+                        Turning ideas into real-world solutions &mdash; one project at a time.
+                    </p>
                 </div>
             </div>
 
-            <div class="view-all-projects scroll-fade-up">
-                <a href="#" class="view-all-btn">
-                    <span>VIEW ALL PROJECTS</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+            <!-- The Main 3-Column Interactive Stage (Flanked by circular navigation arrows) -->
+            <div class="featured-stage-wrapper" data-scroll-reveal data-reveal-type="open-scale" style="--reveal-delay: 100ms;">
+                <!-- Floating Left Arrow -->
+                <button type="button" class="stage-nav-arrow prev" id="feat-arrow-prev" aria-label="Previous Project"
+                    title="Previous Project">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Stage 3-Column Content (Hydrated dynamically) -->
+                <div class="featured-stage-content" id="featured-stage-content">
+                    <!-- Populated dynamically by FeaturedProjectShowcase -->
+                </div>
+
+                <!-- Floating Right Arrow -->
+                <button type="button" class="stage-nav-arrow next" id="feat-arrow-next" aria-label="Next Project"
+                    title="Next Project">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
-                </a>
+                </button>
             </div>
-        </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience-section">
-            <div class="section-container">
-                <div class="section-header scroll-fade-up">
-                    <div class="eyebrow">— 03. EXPERIENCE</div>
-                    <h2 class="section-title" style="font-size: clamp(3rem, 5vw, 4.5rem);">Where I've Worked</h2>
-                    <div class="section-line"></div>
+            <!-- Bottom Interactive Polaroid Reel & Dashed Trail -->
+            <div class="featured-bottom-carousel-wrap" data-scroll-reveal style="--reveal-delay: 180ms;">
+                <!-- Decorative Corner Burst (Left) -->
+                <svg class="doodle-burst-left" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+                    <path d="M6 28 L14 20 M4 17 L16 17 M8 6 L18 14" stroke="#5E8CA8" stroke-width="2.4"
+                        stroke-linecap="round" />
+                </svg>
+
+                <!-- Curved Dashed Trail Connecting Cards -->
+                <div class="dashed-trail-container" aria-hidden="true">
+                    <svg class="dashed-trail-svg" viewBox="0 0 1000 60" preserveAspectRatio="none">
+                        <path d="M 30,38 Q 280,10 520,38 T 970,25" fill="none" stroke="#55829E" stroke-width="2"
+                            stroke-dasharray="6,7" stroke-linecap="round" />
+                    </svg>
                 </div>
 
-                <div class="xp-grid">
-                    <!-- Card 1 -->
-                    <div class="xp-card scroll-fade-up" data-tilt>
-                        <div class="xp-card-border"></div>
-                        <div class="xp-card-inner">
-                            <div class="xp-left">
-                                <span class="xp-num">01</span>
-                                <div class="xp-status xp-status-active">
-                                    <span class="xp-status-dot"></span>
-                                    Active
-                                </div>
-                            </div>
-                            <div class="xp-right">
-                                <div class="xp-meta">
-                                    <span class="xp-date">JUN 2026 — PRESENT</span>
-                                </div>
-                                <h3 class="xp-role">AIML — Summer Training Trainee</h3>
-                                <h4 class="xp-company">@ SRDT Pvt. Ltd.</h4>
-                                <p class="xp-desc">Studied core ML concepts — customer segmentation, churn prediction, demand forecasting — via retail case studies. Built sample preprocessing and inference pipelines during structured ML training alongside DSA coursework.</p>
-                                <div class="xp-tags">
-                                    <span>Python</span>
-                                    <span>Machine Learning</span>
-                                    <span>DSA</span>
-                                    <span>Data Preprocessing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="xp-card scroll-fade-up delay-1" data-tilt>
-                        <div class="xp-card-border"></div>
-                        <div class="xp-card-inner">
-                            <div class="xp-left">
-                                <span class="xp-num">02</span>
-                                <div class="xp-status xp-status-done">
-                                    <span class="xp-status-dot"></span>
-                                    Completed
-                                </div>
-                            </div>
-                            <div class="xp-right">
-                                <div class="xp-meta">
-                                    <span class="xp-date">SEPT 2025</span>
-                                </div>
-                                <h3 class="xp-role">Python Full Stack — Summer Internship</h3>
-                                <h4 class="xp-company">@ SRDT Pvt. Ltd.</h4>
-                                <p class="xp-desc">Implemented CRUD operations, database integration, and server-side logic across full-stack applications. Gained practical exposure to Python, MySQL database, and web development fundamentals.</p>
-                                <div class="xp-tags">
-                                    <span>Python</span>
-                                    <span>MySQL</span>
-                                    <span>Full Stack</span>
-                                    <span>Web Dev</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Horizontal Polaroid Cards Track -->
+                <div class="polaroid-reel-dock" id="polaroid-reel-dock" role="group"
+                    aria-label="Project Quick Selector">
+                    <!-- Populated dynamically by FeaturedProjectShowcase -->
                 </div>
-            </div>
-        </section>
 
-        <!-- Journey Section -->
-        <section id="journey" class="journey-section pinned-scroll-container">
-            <div class="sticky-viewport">
-                <div class="section-container roadmap-moving-content">
-                    <div class="section-header scroll-fade-up"
-                        style="flex-direction: column; gap: 1.5rem; margin-bottom: 4rem;">
-                        <div class="eyebrow">- 04. JOURNEY</div>
-                        <h2 class="section-title" style="font-size: clamp(3rem, 5vw, 4.5rem);">My Journey</h2>
-                        <p class="section-subtitle"
-                            style="color: var(--text-secondary); max-width: 600px; font-size: 1.1rem; font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 1rem; margin-top: 1rem;">
-                            "Every Experience in Your Life Is Being Orchestrated To Teach You Something You Need To Know
-                            To Move Forward."
+                <!-- Decorative Curved Arrow (Right) -->
+                <svg class="doodle-arrow-right" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <path d="M 6,34 Q 24,30 32,10 M 22,9 L 34,9 L 34,21" stroke="#5E8CA8" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         ARCHITECTURAL SECTION PARTITION 04 -> 05 (Projects -> Credentials)
+         ========================================================================== -->
+    <div class="sec-partition" data-scroll-reveal data-reveal-type="open-scale">
+        <div class="partition-track">
+            <div class="partition-line left">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+            <a href="#credentials-showcase" class="partition-node" aria-label="Transit to Section 05: Credentials">
+                <span class="partition-beacon" aria-hidden="true">
+                    <span class="beacon-core"></span>
+                    <span class="beacon-ring"></span>
+                </span>
+                <span class="partition-index">04 <span class="partition-arr">&rarr;</span> 05</span>
+                <span class="partition-sep" aria-hidden="true">//</span>
+                <span class="partition-tag">VERIFIED CREDENTIALS</span>
+                <span class="partition-corner tl" aria-hidden="true"></span>
+                <span class="partition-corner tr" aria-hidden="true"></span>
+                <span class="partition-corner bl" aria-hidden="true"></span>
+                <span class="partition-corner br" aria-hidden="true"></span>
+            </a>
+            <div class="partition-line right">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="partition-aura" aria-hidden="true"></div>
+    </div>
+
+    <!-- ==========================================================================
+         BOTTOM SECTION: CREDENTIALS SHOWCASE
+         (Certifications & Verified Honors)
+         ========================================================================== -->
+    <section class="purple-showcase-section" id="credentials-showcase">
+        <!-- Interactive WebGL2 Particles Backdrop -->
+        <div class="section-particles-bg" id="particles-certifications" aria-hidden="true"></div>
+        <div class="container">
+            <!-- ==========================================================================
+                 CERTIFICATIONS SECTION: 3D HOLOGRAPHIC CREDENTIAL DECK & SLIDER
+                 ========================================================================== -->
+            <div class="certifications-scrapbook" id="certifications">
+                <!-- Unified Left-Aligned Section Header -->
+                <div class="sec-header cert-showcase-header" data-scroll-reveal>
+                    <div class="sec-header-main">
+                        <div class="sec-eyebrow">
+                            <span class="sec-eyebrow-dot" aria-hidden="true"></span>
+                            <span class="sec-count" aria-label="Section 05 of 06">05<span class="sec-count-total">/06</span></span>
+                            <span class="sec-eyebrow-sep" aria-hidden="true">//</span>
+                            <span class="sec-name" id="cert-eyebrow-text">CERTIFICATIONS</span>
+                        </div>
+                        <h2 class="sec-title">
+                            Verified <span class="sec-title-accent">Credentials.</span>
+                        </h2>
+                        <p class="sec-subtitle" id="cert-subtitle">
+                            A curated showcase of industry-accredited certifications, professional specializations, and
+                            verified technical competencies.
                         </p>
                     </div>
 
-                    <div class="tech-roadmap">
-                        <div class="roadmap-line">
-                            <div class="roadmap-line-glow"></div>
-                        </div>
-
-                        <!-- 1 -->
-                        <div class="roadmap-node left scroll-fade-up">
-                            <div class="roadmap-pin active">
-                                <div class="radar-pulse"></div>
-                                <div class="pin-core"></div>
+                    <!-- Right Stats Badge -->
+                    <div class="sec-header-aside cert-header-right" data-scroll-reveal data-reveal-type="open-right" style="--reveal-delay: 100ms;">
+                        <div class="cert-stat-badge">
+                            <div class="cert-stat-icon-wrap" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="6" />
+                                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                                </svg>
                             </div>
-                            <div class="roadmap-card">
-                                <div class="map-label">ACTIVE NODE</div>
-                                <div class="step-date">Oct 2025 - present...</div>
-                                <h4 class="step-title">Event Management Lead</h4>
-                                <p class="step-org">AlgoZenith SRMCEM</p>
+                            <div class="cert-stat-meta">
+                                <span class="cert-stat-num" id="cert-stat-num">08+</span>
+                                <span class="cert-stat-label">Accredited Diplomas</span>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- 2 -->
-                        <div class="roadmap-node right scroll-fade-up delay-1">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">6th Nov 2025</div>
-                                <h4 class="step-title">Organizing Team Member</h4>
-                                <p class="step-org">GenAI Hackathon 2025 LKO | GDG SRMCEM</p>
-                            </div>
+                <!-- Washi Tape Category Filters -->
+                <div class="cert-filters-tape" id="cert-filters" data-scroll-reveal style="--reveal-delay: 80ms;">
+                    <!-- Hydrated dynamically from data/certifications.json -->
+                </div>
+
+                <!-- 3D Cylindrical Scroll Stage -->
+                <div class="cert-slider-container" id="cert-slider-container" data-scroll-reveal data-reveal-type="open-scale" style="--reveal-delay: 160ms;">
+                    <!-- The 3D Cylindrical Carousel Stage (Wheel Scroll, Drag & Click) -->
+                    <div class="cert-stage-wrapper" id="cert-stage-wrapper">
+                        <div class="cert-stage" id="cert-stage">
+                            <!-- Hydrated dynamically by DataLoader.renderCertifications -->
                         </div>
+                    </div>
+                </div>
 
-                        <!-- 3 -->
-                        <div class="roadmap-node left scroll-fade-up delay-2">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">1st July 2025 - 14th July 2025</div>
-                                <h4 class="step-title">Internship & Training</h4>
-                                <p class="step-org">Full stack web dev | SRDT</p>
-                            </div>
+                <!-- Slider Bottom Controls Bar -->
+                <div class="cert-slider-bottom" data-scroll-reveal style="--reveal-delay: 220ms;">
+                    <!-- Slide Counter -->
+                    <div class="cert-counter-chip">
+                        <span class="cert-curr-idx" id="cert-curr-idx">01</span>
+                        <span class="cert-counter-slash">/</span>
+                        <span class="cert-total-idx" id="cert-total-idx">08</span>
+                    </div>
+
+                    <!-- Dots Indicator -->
+                    <div class="cert-pagination-dots" id="cert-dots" aria-label="Certificate slider dots">
+                        <!-- Hydrated dynamically -->
+                    </div>
+
+                    <!-- Right Controls: Autoplay & Swipe Hint -->
+                    <div class="cert-bottom-actions">
+                        <button type="button" class="cert-autoplay-toggle is-playing" id="cert-autoplay-btn"
+                            aria-label="Toggle autoplay" aria-pressed="true" title="Pause / Play slideshow">
+                            <span class="autoplay-pulse-ring" aria-hidden="true"></span>
+                            <svg class="icon-pause" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <rect x="6" y="4" width="4" height="16" rx="1" />
+                                <rect x="14" y="4" width="4" height="16" rx="1" />
+                            </svg>
+                            <svg class="icon-play" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            <span class="autoplay-label">Auto-slide</span>
+                        </button>
+                        <span class="cert-swipe-hint">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="7" y="2" width="10" height="20" rx="5"></rect>
+                                <line x1="12" y1="6" x2="12" y2="10"></line>
+                            </svg>
+                            Scroll wheel, drag, or click cards
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         ARCHITECTURAL SECTION PARTITION 05 -> 06 (Credentials -> Contact)
+         ========================================================================== -->
+    <div class="sec-partition" data-scroll-reveal data-reveal-type="open-scale">
+        <div class="partition-track">
+            <div class="partition-line left">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+            <a href="#contact" class="partition-node" aria-label="Transit to Section 06: Contact">
+                <span class="partition-beacon" aria-hidden="true">
+                    <span class="beacon-core"></span>
+                    <span class="beacon-ring"></span>
+                </span>
+                <span class="partition-index">05 <span class="partition-arr">&rarr;</span> 06</span>
+                <span class="partition-sep" aria-hidden="true">//</span>
+                <span class="partition-tag">DIRECT TRANSMISSION</span>
+                <span class="partition-corner tl" aria-hidden="true"></span>
+                <span class="partition-corner tr" aria-hidden="true"></span>
+                <span class="partition-corner bl" aria-hidden="true"></span>
+                <span class="partition-corner br" aria-hidden="true"></span>
+            </a>
+            <div class="partition-line right">
+                <span class="partition-tick" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="partition-aura" aria-hidden="true"></div>
+    </div>
+
+    <!-- ==========================================================================
+         CONTACT / TRANSMISSION SECTION & ARCHITECTURAL FOOTER
+         Deep Black, Crisp White & Dark Powder Blue System
+         ========================================================================== -->
+    <section class="connect-section" id="contact">
+        <div class="container connect-container">
+            <div class="connect-grid">
+                <!-- Left Column: Statement, Click-to-Copy Email Command & Location Telemetry -->
+                <div class="connect-col-left" data-connect-reveal>
+                    <div class="sec-eyebrow">
+                        <span class="sec-eyebrow-dot" aria-hidden="true"></span>
+                        <span class="sec-count" aria-label="Section 06 of 06">06<span class="sec-count-total">/06</span></span>
+                        <span class="sec-eyebrow-sep" aria-hidden="true">//</span>
+                        <span class="sec-name">CONTACT</span>
+                    </div>
+
+                    <h2 class="sec-title connect-sec-title">
+                        Let&rsquo;s Build<br />
+                        Something <span class="sec-title-accent">Insane.</span><span class="connect-cursor-sq" aria-hidden="true"></span>
+                    </h2>
+
+                    <p class="sec-subtitle connect-lead">
+                        Have an idea, a problem worth solving or just want to build something insane? I&rsquo;m always
+                        up for interesting conversations and bold projects.
+                    </p>
+
+                    <!-- Dual-Action Email Command Capsule (Click Bar to Copy, Arrow to Launch Mail) -->
+                    <div class="connect-email-cmd" id="connect-email-cmd">
+                        <button type="button" class="connect-email-copy-area" id="connect-copy-btn"
+                            data-email="piyushverma7419@gmail.com"
+                            aria-label="Copy email address piyushverma7419@gmail.com">
+                            <span class="cmd-mail-ico" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </span>
+                            <span class="cmd-label-stack">
+                                <span class="cmd-main-text" id="connect-copy-label">SEND ME AN EMAIL</span>
+                                <span class="cmd-sub-addr">piyushverma7419@gmail.com</span>
+                            </span>
+                        </button>
+
+                        <a href="mailto:piyushverma7419@gmail.com" class="connect-email-launch"
+                            aria-label="Open default mail app to email Piyush Verma" title="Compose Email">
+                            <span aria-hidden="true">&nearr;</span>
+                        </a>
+                    </div>
+
+                    <!-- Geographic Coordinates & Live Local Time -->
+                    <div class="connect-location-block">
+                        <svg class="connect-loc-pin" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div class="connect-loc-lines">
+                            <p>Lucknow,</p>
+                            <p>Uttar Pradesh, India</p>
+                            <p class="connect-loc-tz">(IST UTC +5:30) <span class="connect-loc-sep">&bull;</span> <span
+                                    id="connect-live-time">LIVE</span></p>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- 4 -->
-                        <div class="roadmap-node right scroll-fade-up">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">May 2025 - present</div>
-                                <h4 class="step-title">Technical Lead</h4>
-                                <p class="step-org">Geek For Geeks</p>
-                            </div>
+                <!-- Right Column: Dotted Radar World Map + Availability + Interactive Social Rows -->
+                <div class="connect-col-right" data-connect-reveal>
+                    <span class="connect-corner-bracket" aria-hidden="true"></span>
+
+                    <!-- Interactive Dot-Matrix World Map with Lucknow Signal Beacon -->
+                    <div class="connect-world-card" id="connect-world-card" aria-label="Location radar: Lucknow, India">
+                        <svg class="connect-world-svg" viewBox="0 0 800 380" fill="none" role="img"
+                            aria-label="Dotted world map highlighting Lucknow, India">
+                            <defs>
+                                <pattern id="worldDotGrid" width="7.5" height="7.5" patternUnits="userSpaceOnUse">
+                                    <circle cx="3.2" cy="3.2" r="1.35" fill="rgba(255, 255, 255, 0.28)" />
+                                </pattern>
+                                <pattern id="indiaDotHighlight" width="7.5" height="7.5" patternUnits="userSpaceOnUse">
+                                    <circle cx="3.2" cy="3.2" r="1.55" fill="#6D9BB8" />
+                                </pattern>
+                                <radialGradient id="radarAura" cx="69.7%" cy="37.6%" r="36%">
+                                    <stop offset="0%" stop-color="#5E8CA8" stop-opacity="0.28" />
+                                    <stop offset="55%" stop-color="#436B85" stop-opacity="0.08" />
+                                    <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Subtle Equator & Meridian Hairlines -->
+                            <line x1="0" y1="218" x2="800" y2="218" stroke="rgba(255,255,255,0.06)"
+                                stroke-dasharray="4 6" />
+                            <line x1="558" y1="0" x2="558" y2="380" stroke="rgba(94, 140, 168, 0.14)"
+                                stroke-dasharray="3 5" />
+                            <line x1="0" y1="143" x2="800" y2="143" stroke="rgba(94, 140, 168, 0.14)"
+                                stroke-dasharray="3 5" />
+
+                            <!-- Soft Powder-Blue Glow Centered on India -->
+                            <rect x="0" y="0" width="800" height="380" fill="url(#radarAura)" />
+
+                            <!-- North America + Central America -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M12,42 L48,26 L108,18 L178,18 L228,36 L246,66 L216,96 L196,136 L176,138 L162,158 L194,186 L202,196 L186,196 L154,174 L132,148 L112,118 L96,76 L58,64 L16,58 Z" />
+                            <!-- Greenland -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M254,18 L296,6 L336,12 L322,42 L284,54 L260,44 Z" />
+                            <!-- South America -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M204,192 L242,196 L292,226 L304,254 L284,292 L254,334 L234,368 L220,360 L214,306 L198,248 L194,212 Z" />
+                            <!-- Europe + UK + Scandinavia -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M358,112 L364,86 L378,74 L398,74 L414,48 L434,26 L456,36 L450,74 L468,94 L444,108 L412,114 L384,116 Z" />
+                            <path fill="url(#worldDotGrid)"
+                                d="M356,64 L370,56 L374,74 L358,76 Z" />
+                            <!-- Africa -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M356,124 L408,122 L448,132 L468,166 L494,182 L478,224 L456,268 L428,312 L408,308 L398,264 L394,216 L362,202 L340,178 L342,148 Z" />
+                            <!-- Madagascar -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M472,262 L486,258 L484,288 L468,288 Z" />
+                            <!-- Eurasia (Russia, Middle East, Central Asia, East Asia, SE Asia) -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M454,34 L526,20 L614,18 L698,26 L754,40 L734,62 L696,74 L682,98 L652,130 L632,162 L614,196 L596,214 L584,184 L578,154 L544,122 L528,154 L506,162 L482,184 L462,174 L452,140 L476,122 L454,104 Z" />
+                            <!-- Japan -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M674,116 L696,92 L708,104 L684,132 Z" />
+                            <!-- Southeast Asia Islands -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M594,212 L636,232 L666,222 L664,244 L618,248 Z" />
+                            <!-- Australia + New Zealand -->
+                            <path fill="url(#worldDotGrid)"
+                                d="M632,276 L678,252 L714,274 L722,306 L696,326 L656,318 L632,306 Z" />
+                            <path fill="url(#worldDotGrid)"
+                                d="M742,318 L758,312 L746,342 L732,338 Z" />
+
+                            <!-- Highlighted India Subcontinent Overlay -->
+                            <path fill="url(#indiaDotHighlight)"
+                                d="M530,148 L544,120 L572,138 L582,156 L552,198 L536,172 Z" />
+
+                            <!-- Faint Connection Arcs Radiating From Lucknow -->
+                            <path d="M558,143 Q470,60 378,76" stroke="rgba(109, 155, 184, 0.28)" stroke-width="1"
+                                stroke-dasharray="3 4" fill="none" />
+                            <path d="M558,143 Q370,35 206,108" stroke="rgba(109, 155, 184, 0.22)" stroke-width="1"
+                                stroke-dasharray="3 4" fill="none" />
+                            <path d="M558,143 Q640,190 688,284" stroke="rgba(109, 155, 184, 0.24)" stroke-width="1"
+                                stroke-dasharray="3 4" fill="none" />
+                        </svg>
+
+                        <!-- Exact Geolocation Beacon on Lucknow (69.75%, 37.6%) -->
+                        <div class="india-marker" aria-hidden="true">
+                            <span class="india-ring"></span>
+                            <span class="india-ring india-ring-2"></span>
+                            <span class="india-dot"></span>
+                            <span class="india-tag">LKO &bull; INDIA</span>
                         </div>
+                    </div>
 
-                        <!-- 5 -->
-                        <div class="roadmap-node left scroll-fade-up delay-1">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">19th May 2025</div>
-                                <h4 class="step-title">Code Charades 3.0</h4>
-                                <p class="step-org">Event Lead | GFG SRMCEM</p>
-                            </div>
-                        </div>
+                    <!-- Availability Micro-Header -->
+                    <div class="connect-collab-banner">
+                        <span class="collab-bracket">[ OPEN TO COLLABORATE ]</span>
+                        <span class="collab-anywhere">ANYWHERE, <span class="collab-accent">ANYTIME.</span></span>
+                    </div>
 
-                        <!-- 6 -->
-                        <div class="roadmap-node right scroll-fade-up delay-2">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">Oct 2024 - Nov 2024</div>
-                                <h4 class="step-title">GenAI Study Jam 2024</h4>
-                                <p class="step-org">Google Developer Groups | SRMCEM</p>
-                            </div>
-                        </div>
-
-                        <!-- 7 -->
-                        <div class="roadmap-node left scroll-fade-up">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">Dec 2024</div>
-                                <h4 class="step-title">BitHax-24</h4>
-                                <p class="step-org">Winner (2nd Place) | Inter college hackathon | AUL</p>
-                            </div>
-                        </div>
-
-                        <!-- 8 -->
-                        <div class="roadmap-node right scroll-fade-up delay-1">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">Sep 2024 - May 2025</div>
-                                <h4 class="step-title">Technical Coordinator</h4>
-                                <p class="step-org">Geeks For Geeks</p>
-                            </div>
-                        </div>
-
-                        <!-- 9 -->
-                        <div class="roadmap-node left scroll-fade-up delay-2">
-                            <div class="roadmap-pin">
-                                <div class="pin-core"></div>
-                            </div>
-                            <div class="roadmap-card">
-                                <div class="step-date">July 2024</div>
-                                <h4 class="step-title">Zephyre</h4>
-                                <p class="step-org">Winner | Ideafest | SRMCEM</p>
-                            </div>
-                        </div>
-
-                        <!-- Hidden Map Nodes -->
-                        <div id="hidden-roadmap" style="display: none; width: 100%;">
-                            <!-- 10 -->
-                            <div class="roadmap-node right">
-                                <div class="roadmap-pin">
-                                    <div class="pin-core"></div>
-                                </div>
-                                <div class="roadmap-card">
-                                    <div class="step-date">Sep 2025 - Oct 2025</div>
-                                    <h4 class="step-title">Event Specific Lead</h4>
-                                    <p class="step-org">AlgoZenith SRMCEM</p>
-                                </div>
-                            </div>
-
-                            <!-- 11 -->
-                            <div class="roadmap-node left">
-                                <div class="roadmap-pin">
-                                    <div class="pin-core"></div>
-                                </div>
-                                <div class="roadmap-card">
-                                    <div class="step-date">29th Sep 2025</div>
-                                    <h4 class="step-title">Naukri Campus Young Tourks 2025</h4>
-                                    <p class="step-org">98.3 % | National level skill contest</p>
-                                </div>
-                            </div>
-
-                            <!-- 12 -->
-                            <div class="roadmap-node right">
-                                <div class="roadmap-pin">
-                                    <div class="pin-core"></div>
-                                </div>
-                                <div class="roadmap-card">
-                                    <div class="step-date">24th Sep 2025</div>
-                                    <h4 class="step-title">TVS credit epic 7.0 - IT challenge</h4>
-                                    <p class="step-org">National Level aptitude test | TVS credit</p>
-                                </div>
-                            </div>
-
-                            <!-- 13 -->
-                            <div class="roadmap-node left">
-                                <div class="roadmap-pin">
-                                    <div class="pin-core"></div>
-                                </div>
-                                <div class="roadmap-card">
-                                    <div class="step-date">19 Sep 2025 - 23 Sep 2025</div>
-                                    <h4 class="step-title">Smart India Hackathon 2025</h4>
-                                    <p class="step-org">Agrowise | Campus_Sathi</p>
-                                </div>
-                            </div>
-
-                            <!-- 14 -->
-                            <div class="roadmap-node right">
-                                <div class="roadmap-pin">
-                                    <div class="pin-core"></div>
-                                </div>
-                                <div class="roadmap-card">
-                                    <div class="step-date">15th Aug 2025</div>
-                                    <h4 class="step-title">GenAI Buildathon 2025</h4>
-                                    <p class="step-org">NxtWave | OpenAI</p>
-                                </div>
-                            </div>
-
-                            <!-- 15 -->
-                            <div class="roadmap-node left">
-                                <div class="roadmap-pin">
-                                    <div class="pin-core"></div>
-                                </div>
-                                <div class="roadmap-card">
-                                    <div class="step-date">Sep 2024</div>
-                                    <h4 class="step-title">Smart India Hackathon 2024</h4>
-                                    <p class="step-org">College level finalist | SRMCEM</p>
-                                </div>
-                            </div>
-
-                            <!-- Collapse Map Button -->
-                            <div class="view-all-projects"
-                                style="margin-top: 2rem; padding-top: 0; border: none; text-align: center; position: relative; z-index: 5;">
-                                <button onclick="
-                            document.getElementById('hidden-roadmap').style.display = 'none';
-                            document.getElementById('expand-map-container').style.display = 'block';
-                            window.dispatchEvent(new Event('scroll'));
-                            setTimeout(() => {
-                                document.getElementById('journey').scrollIntoView({ behavior: 'smooth' });
-                            }, 50);
-                        " class="view-all-btn">
-                                    <span>COLLAPSE MAP</span>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
+                    <!-- Horizontal Architectural Link Rows (Social Links Logos Only) -->
+                    <div class="connect-link-list" id="connect-link-list">
+                        <a href="https://github.com/PiyushVerma246" target="_blank" rel="noopener noreferrer"
+                            class="connect-link-row" aria-label="GitHub profile">
+                            <div class="link-row-left">
+                                <span class="link-row-icon" aria-hidden="true">
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
                                     </svg>
-                                </button>
+                                </span>
+                                <span class="link-row-meta">
+                                    <span class="link-row-title">GITHUB</span>
+                                    <span class="link-row-sub">github.com/PiyushVerma246</span>
+                                </span>
                             </div>
-                        </div>
+                            <span class="link-row-arrow" aria-hidden="true">&nearr;</span>
+                        </a>
 
-                        <!-- View More Map Expansion -->
-                        <div id="expand-map-container" class="view-all-projects scroll-fade-up"
-                            style="margin-top: 2rem; padding-top: 0; border: none; text-align: center; position: relative; z-index: 5;">
-                            <button onclick="
-                        document.getElementById('hidden-roadmap').style.display = 'block';
-                        this.parentElement.style.display = 'none';
-                        // Re-trigger scroll event to recalculate heights
-                        window.dispatchEvent(new Event('scroll'));
-                    " class="view-all-btn">
-                                <span>EXPAND MAP</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="section-container">
-                <div class="section-header scroll-fade-up">
-                    <div class="eyebrow">— 05. CONTACT</div>
-                    <h2 class="section-title" style="font-size: clamp(3rem, 5vw, 4.5rem);">Let's Connect</h2>
-                    <div class="section-line"></div>
-                </div>
-
-                <div class="contact-content scroll-fade-up delay-1">
-                    <div class="contact-cta">
-                        <h3 class="contact-heading">Ready to build something <span
-                                class="highlight">extraordinary?</span></h3>
-                        <p class="contact-text">I'm currently looking for new opportunities and collaborations. Whether
-                            you have a question, a project in mind, or just want to say hi, I'll try my best to get back
-                            to you!</p>
-                        <a href="mailto:piyushverma7419@gmail.com" class="btn btn-primary"
-                            style="margin-top: 2rem; display: inline-flex;">SAY HELLO &rarr;</a>
-                    </div>
-
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
+                        <a href="https://www.linkedin.com/in/piyush-verma-9a6470258/" target="_blank"
+                            rel="noopener noreferrer" class="connect-link-row" aria-label="LinkedIn profile">
+                            <div class="link-row-left">
+                                <span class="link-row-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </span>
+                                <span class="link-row-meta">
+                                    <span class="link-row-title">LINKEDIN</span>
+                                    <span class="link-row-sub">linkedin.com/in/piyush-verma-9a6470258</span>
+                                </span>
                             </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:piyushverma7419@gmail.com"
-                                    class="contact-value">piyushverma7419@gmail.com</a>
-                            </div>
-                        </div>
+                            <span class="link-row-arrow" aria-hidden="true">&nearr;</span>
+                        </a>
 
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
+                        <a href="mailto:piyushverma7419@gmail.com" class="connect-link-row"
+                            aria-label="Send direct email">
+                            <div class="link-row-left">
+                                <span class="link-row-icon" aria-hidden="true">
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="link-row-meta">
+                                    <span class="link-row-title">DIRECT EMAIL</span>
+                                    <span class="link-row-sub">piyushverma7419@gmail.com</span>
+                                </span>
                             </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Phone</span>
-                                <a href="tel:+919452615207" class="contact-value">+91 9452615207</a>
-                            </div>
-                        </div>
+                            <span class="link-row-arrow" aria-hidden="true">&nearr;</span>
+                        </a>
 
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
+                        <a href="tel:+919452615207" class="connect-link-row" aria-label="Phone contact">
+                            <div class="link-row-left">
+                                <span class="link-row-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="link-row-meta">
+                                    <span class="link-row-title">VOICE / CALL</span>
+                                    <span class="link-row-sub">+91 94526 15207</span>
+                                </span>
                             </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Lucknow, Uttar Pradesh</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-socials">
-                            <a href="https://github.com/PiyushVerma-1" class="social-icon" target="_blank"><svg
-                                    width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg></a>
-                            <a href="https://www.linkedin.com/in/piyush-verma-9a6470258/" class="social-icon"
-                                target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                    </path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg></a>
-                        </div>
+                            <span class="link-row-arrow" aria-hidden="true">&nearr;</span>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <footer class="footer">
-                <div class="footer-content">
-                    <div class="logo-badge"
-                        style="font-family: var(--font-heading); font-size: 1.5rem; color: #A4C1D0;">PV</div>
-                    <p>&copy; 2026 Piyush Verma. Built with logic and creativity.</p>
+            <!-- Minimal Closing Footer Strip (No Personal Name Logo, Social Logos + Back To Top + Tagline) -->
+            <footer class="connect-footer" data-scroll-reveal style="--reveal-delay: 80ms;">
+                <div class="connect-footer-left">
+                    <div class="connect-footer-socials" aria-label="Social Media Links">
+                        <a href="https://github.com/PiyushVerma246" target="_blank" rel="noopener noreferrer"
+                            class="footer-logo-btn" aria-label="GitHub" title="GitHub">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/piyush-verma-9a6470258/" target="_blank"
+                            rel="noopener noreferrer" class="footer-logo-btn" aria-label="LinkedIn" title="LinkedIn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:piyushverma7419@gmail.com" class="footer-logo-btn" aria-label="Email"
+                            title="Email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <span class="connect-footer-copy">&copy; 2026 &bull; LUCKNOW, INDIA</span>
+                </div>
+
+                <button type="button" class="footer-top-btn" id="connect-back-top" aria-label="Back to top">
+                    <span>BACK TO TOP</span>
+                    <span class="footer-top-arrow" aria-hidden="true">&nearr;</span>
+                </button>
+
+                <div class="connect-footer-built">
+                    <span>BUILT WITH CURIOSITY &amp; CODE</span>
+                    <span class="built-code-tag" aria-hidden="true">&lt;/&gt;</span>
                 </div>
             </footer>
-        </section>
+        </div>
+    </section>
+    </main>
 
-        <script src="script.js"></script>
+    <!-- ==========================================================================
+         SCRAPBOOK PROJECT & CERTIFICATE MODAL LIGHTBOX
+         ========================================================================== -->
+    <div class="scrapbook-modal" id="scrapbook-modal" role="dialog" aria-modal="true" aria-hidden="true" inert
+        aria-label="Detail View Modal">
+        <div class="modal-content-card" id="modal-card">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div id="modal-body">
+                <!-- Dynamically populated on click -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script loading -->
+    <script src="components/OptionWheel/OptionWheel.js" defer></script>
+    <script src="components/Particles/Particles.js" defer></script>
+    <script src="script.js?v=black_powder_v13" defer></script>
 </body>
 
 </html>

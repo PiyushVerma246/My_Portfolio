@@ -1,0 +1,26 @@
+{
+  "eyebrow": "ABOUT ME",
+  "status": "LUCKNOW, IN • 26.85° N",
+  "heading": "About",
+  "headingHighlight": "Me.",
+  "subrole": "FULL-STACK DEVELOPER · CS '27",
+  "description": "I'm <strong>Piyush</strong>, a developer &amp; CS undergrad crafting fast, AI-powered web apps where clean architecture meets tactile UI.",
+  "likes": [
+    "Tactile UI & Motion",
+    "Clean APIs & Code",
+    "Late-Night Debugging",
+    "Zero-to-One Builds"
+  ],
+  "dislikes": [
+    "Laggy, Bloated Pages",
+    "Band-Aid Hacks",
+    "Visuals Over UX",
+    "Talk Over Shipping"
+  ],
+  "vibes": [
+    { "label": "FUEL", "value": "Masala Chai" },
+    { "label": "SOUND", "value": "Lo-Fi & Synth" },
+    { "label": "SETUP", "value": "Dark Mode Only" }
+  ],
+  "motto": "Keep it simple, make it fast."
+}

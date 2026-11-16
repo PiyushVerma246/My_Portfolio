@@ -1,0 +1,464 @@
+{
+    "eyebrow": "My Work",
+    "heading": "Featured Project",
+    "subtitle": "Turning ideas into real-world solutions \u2014 one project at a time.",
+    "projects": [
+        {
+            "number": "01",
+            "displayTotal": "06",
+            "title": "AniCure",
+            "doodleIcon": "paw",
+            "doodleEmoji": "\ud83d\udc3e",
+            "role": "AI Based Animal Rescue System",
+            "category": "FULL STACK \u2022 AI \u2022 REAL WORLD IMPACT",
+            "status": "Production Ready",
+            "domain": "anicure.app",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "description": "A full-stack platform to report, rescue, rehabilitate and rehome animals with AI injury analysis, real-time tracking, NGO coordination, adoption and transparent donations.",
+            "tech": [
+                "Node.js",
+                "MongoDB",
+                "React.js",
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "Python"
+            ],
+            "image": "assets/projects/anicure.webp",
+            "thumb": "assets/projects/anicure-thumb.webp",
+            "imageAlt": "AniCure Platform Preview",
+            "features": [
+                {
+                    "title": "AI Injury Analysis",
+                    "desc": "Detects injury severity using AI (3 levels) from uploaded images.",
+                    "icon": "brain",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Rescue Coordination",
+                    "desc": "Geolocation-based NGO dispatch using Haversine algorithm.",
+                    "icon": "location",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Adoption Platform",
+                    "desc": "Helps animals find loving homes.",
+                    "icon": "paw",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Donation Transparency",
+                    "desc": "Blockchain-based transparent donation tracking.",
+                    "icon": "card",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Rewards System",
+                    "desc": "Earn points for reports and contributions.",
+                    "icon": "star",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "links": [
+                {
+                    "text": "LIVE PREVIEW",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "primary",
+                    "hasArrow": true
+                },
+                {
+                    "text": "SOURCE CODE",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "outline",
+                    "icon": "github"
+                }
+            ]
+        },
+        {
+            "number": "02",
+            "displayTotal": "06",
+            "title": "CampusSathi",
+            "doodleIcon": "bot",
+            "doodleEmoji": "\ud83e\udd16",
+            "role": "RAG-Powered AI University Assistant",
+            "category": "GEN AI \u2022 RAG ARCHITECTURE \u2022 EDTECH",
+            "status": "Deployed & Active",
+            "domain": "campussathi.edu",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "description": "24\u00d77 multi-agent university assistant slashing administrative query resolution times by 70%. Features semantic syllabus search, document vector retrieval, and student portals.",
+            "tech": [
+                "Python",
+                "LangChain",
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "MongoDB"
+            ],
+            "image": "assets/projects/campussathi.webp",
+            "thumb": "assets/projects/campussathi-thumb.webp",
+            "imageAlt": "CampusSathi Platform Preview",
+            "features": [
+                {
+                    "title": "RAG Document Q&A",
+                    "desc": "Semantic vector retrieval across entire university syllabus and docs.",
+                    "icon": "brain",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Smart Lost & Found",
+                    "desc": "Multi-modal image matching algorithm to reunite lost campus belongings.",
+                    "icon": "search",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "24/7 AI Campus Help",
+                    "desc": "Autonomous multi-agent query routing slashing wait times by 70%.",
+                    "icon": "support",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Admin Control API",
+                    "desc": "Granular RBAC role policies and real-time student portal hooks.",
+                    "icon": "api",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Student Analytics",
+                    "desc": "Actionable dashboard insights for academic engagement tracking.",
+                    "icon": "chart",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "links": [
+                {
+                    "text": "LIVE PREVIEW",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "primary",
+                    "hasArrow": true
+                },
+                {
+                    "text": "SOURCE CODE",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "outline",
+                    "icon": "github"
+                }
+            ]
+        },
+        {
+            "number": "03",
+            "displayTotal": "06",
+            "title": "DevMeet",
+            "doodleIcon": "community",
+            "doodleEmoji": "\ud83d\udc65",
+            "role": "Real-Time Developer Network & Collaboration Hub",
+            "category": "FULL STACK \u2022 WEBSOCKETS \u2022 NETWORKING",
+            "status": "1,000+ Community",
+            "domain": "devmeet.network",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "description": "Collaborative talent and hackathon hub linking 1,000+ engineers for algorithmic team matching, verified repo skills assessment, virtual whiteboard rooms, and live messaging.",
+            "tech": [
+                "React.js",
+                "Socket.io",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "TailwindCSS"
+            ],
+            "image": "assets/projects/devmeet.webp",
+            "thumb": "assets/projects/devmeet-thumb.webp",
+            "imageAlt": "DevMeet Platform Preview",
+            "features": [
+                {
+                    "title": "Smart Team Match",
+                    "desc": "Matches engineers based on repo skills, stack, and hackathon goals.",
+                    "icon": "match",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Hackathon Hub",
+                    "desc": "Comprehensive organizer portal for team formation and project submissions.",
+                    "icon": "trophy",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Skill Verification",
+                    "desc": "Automated GitHub commit history and code quality badge validation.",
+                    "icon": "badge",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Interactive Rooms",
+                    "desc": "Virtual collaboration rooms with canvas whiteboards and screen share.",
+                    "icon": "chat",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Live WebSockets",
+                    "desc": "Low-latency real-time presence indicators and messaging channels.",
+                    "icon": "speed",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "links": [
+                {
+                    "text": "LIVE PREVIEW",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "primary",
+                    "hasArrow": true
+                },
+                {
+                    "text": "SOURCE CODE",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "outline",
+                    "icon": "github"
+                }
+            ]
+        },
+        {
+            "number": "04",
+            "displayTotal": "06",
+            "title": "BlockTrack",
+            "doodleIcon": "shield",
+            "doodleEmoji": "\ud83d\udee1\ufe0f",
+            "role": "Decentralized Aid Auditing & Relief Ledger",
+            "category": "BLOCKCHAIN \u2022 WEB3 \u2022 CRYPTO AUDITING",
+            "status": "Smart Contract Verified",
+            "domain": "blocktrack.io",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "description": "Decentralized disaster relief tracking protocol with immutable SHA-256 cryptographic verification ensuring 100% donation provenance, automated milestones, and zero fraud leakage.",
+            "tech": [
+                "Solidity",
+                "Ethers.js",
+                "React.js",
+                "Node.js",
+                "Web3.js",
+                "Hardhat"
+            ],
+            "image": "assets/projects/blocktrack.webp",
+            "thumb": "assets/projects/blocktrack-thumb.webp",
+            "imageAlt": "BlockTrack Platform Preview",
+            "features": [
+                {
+                    "title": "SHA-256 Ledger",
+                    "desc": "Immutable cryptographic chain ensuring 100% donation provenance.",
+                    "icon": "hash",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Smart Contracts",
+                    "desc": "Automated milestone escrow release with zero fraud leakage.",
+                    "icon": "contract",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Real-time Auditing",
+                    "desc": "Public on-chain verification explorer for global relief teams.",
+                    "icon": "audit",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Disaster Routing",
+                    "desc": "Rapid emergency token distribution to verified relief camps.",
+                    "icon": "location",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Multi-Sig Security",
+                    "desc": "Decentralized consensus validation across verified NGO nodes.",
+                    "icon": "shield",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "links": [
+                {
+                    "text": "LIVE PREVIEW",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "primary",
+                    "hasArrow": true
+                },
+                {
+                    "text": "SOURCE CODE",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "outline",
+                    "icon": "github"
+                }
+            ]
+        },
+        {
+            "number": "05",
+            "displayTotal": "06",
+            "title": "CodeSphere",
+            "doodleIcon": "code",
+            "doodleEmoji": "\ud83d\udcbb",
+            "role": "Cloud Sandboxed IDE & Pair Programming",
+            "category": "SYSTEMS \u2022 DOCKER CONTAINERS \u2022 MONACO",
+            "status": "Dockerized Engine",
+            "domain": "codesphere.dev",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "description": "High-throughput browser sandbox executing multi-language compiler runtimes in isolated Docker containers with real-time operational transformation and WebSocket pair coding.",
+            "tech": [
+                "Docker",
+                "WebSockets",
+                "Monaco Editor",
+                "Go",
+                "React.js",
+                "Redis"
+            ],
+            "image": "assets/projects/codesphere.webp",
+            "thumb": "assets/projects/codesphere-thumb.webp",
+            "imageAlt": "CodeSphere Platform Preview",
+            "features": [
+                {
+                    "title": "Docker Sandboxes",
+                    "desc": "Isolated zero-trust micro-containers executing multi-lang code.",
+                    "icon": "docker",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Live Pair Coding",
+                    "desc": "Operational transformation engine for concurrent multi-cursor edits.",
+                    "icon": "collab",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Monaco Engine",
+                    "desc": "Full VS Code editor environment with LSP and IntelliSense support.",
+                    "icon": "compiler",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Instant Preview",
+                    "desc": "Real-time web server port-forwarding with hot reloads.",
+                    "icon": "preview",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Redis Cache Store",
+                    "desc": "Sub-millisecond session state sync via WebSocket pipelines.",
+                    "icon": "speed",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "links": [
+                {
+                    "text": "LIVE PREVIEW",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "primary",
+                    "hasArrow": true
+                },
+                {
+                    "text": "SOURCE CODE",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "outline",
+                    "icon": "github"
+                }
+            ]
+        },
+        {
+            "number": "06",
+            "displayTotal": "06",
+            "title": "NeuroVision",
+            "doodleIcon": "eye",
+            "doodleEmoji": "\ud83d\udc41\ufe0f",
+            "role": "Deep Learning Diagnostic Scan Assistant",
+            "category": "COMPUTER VISION \u2022 DEEP LEARNING \u2022 HEALTHCARE",
+            "status": "96.4% Accuracy",
+            "domain": "neurovision.ai",
+            "accentColor": "#5E8CA8",
+            "glowColor": "rgba(92, 139, 168, 0.4)",
+            "description": "Convolutional neural network radiology assistant detecting anomalies across MRI and CT scans with 96.4% validation accuracy, interactive Grad-CAM explainability, and DICOM support.",
+            "tech": [
+                "PyTorch",
+                "OpenCV",
+                "Python",
+                "FastAPI",
+                "React.js",
+                "Docker"
+            ],
+            "image": "assets/projects/neurovision.webp",
+            "thumb": "assets/projects/neurovision-thumb.webp",
+            "imageAlt": "NeuroVision Platform Preview",
+            "features": [
+                {
+                    "title": "CNN Classifier",
+                    "desc": "Detects neural anomalies across MRI and CT with 96.4% validation accuracy.",
+                    "icon": "brain",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Grad-CAM Heatmaps",
+                    "desc": "Interactive visual explainability highlights clinically affected regions.",
+                    "icon": "heatmap",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "DICOM Interop",
+                    "desc": "Standard hospital PACS radiography format parser and viewer.",
+                    "icon": "scan",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "Triage Alert Flow",
+                    "desc": "Prioritizes urgent critical findings for immediate physician review.",
+                    "icon": "alert",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "title": "HIPAA Compliant",
+                    "desc": "Anonymized client-side encryption ensures patient data privacy.",
+                    "icon": "shield",
+                    "bg": "#101010",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "links": [
+                {
+                    "text": "LIVE PREVIEW",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "primary",
+                    "hasArrow": true
+                },
+                {
+                    "text": "SOURCE CODE",
+                    "href": "https://github.com/PiyushVerma246",
+                    "type": "outline",
+                    "icon": "github"
+                }
+            ]
+        }
+    ]
+}

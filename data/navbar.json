@@ -1,0 +1,38 @@
+{
+  "brand": {
+    "badge": "PV"
+  },
+  "links": [
+    {
+      "text": "ABOUT",
+      "href": "#about"
+    },
+    {
+      "text": "SKILLS",
+      "href": "#skills"
+    },
+    {
+      "text": "PROJECTS",
+      "href": "#projects"
+    },
+    {
+      "text": "CERTIFICATIONS",
+      "href": "#certifications"
+    },
+    {
+      "text": "EXPERIENCE",
+      "href": "#experience"
+    },
+    {
+      "text": "CONTACT",
+      "href": "#contact"
+    }
+  ],
+  "actions": [
+    {
+      "text": "RESUME",
+      "href": "#resume",
+      "class": "resume-btn"
+    }
+  ]
+}

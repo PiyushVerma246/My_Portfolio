@@ -1,0 +1,82 @@
+{
+  "eyebrow": "My Journey",
+  "heading": "Experience",
+  "subtitle": "A journey of learning, building, leading and growing — one step at a time.",
+  "items": [
+    {
+      "id": "foundations",
+      "step": "01",
+      "date": "2023 – 2027",
+      "dateBg": "#EEF2FF",
+      "dateColor": "#4F46E5",
+      "icon": "grad-cap",
+      "iconBg": "#EDE9FE",
+      "iconColor": "#6366F1",
+      "title": "B.Tech CSE",
+      "org": "SRMCEM, Lucknow",
+      "description": "Started my engineering journey with a curiosity to build, learn and create impact through technology.",
+      "nodeColor": "#6366F1",
+      "phase": "Learn Foundations"
+    },
+    {
+      "id": "projects",
+      "step": "02",
+      "date": "SEP 2023 – NOV 2023",
+      "dateBg": "#EFF6FF",
+      "dateColor": "#2563EB",
+      "icon": "code",
+      "iconBg": "#DBEAFE",
+      "iconColor": "#2563EB",
+      "title": "Travello",
+      "org": "Frontend Project",
+      "description": "Built a travel website with HTML, CSS and JavaScript to explore web development.",
+      "nodeColor": "#3B82F6",
+      "phase": "Build Projects"
+    },
+    {
+      "id": "experience",
+      "step": "03",
+      "date": "SEP 2024 – MAY 2025",
+      "dateBg": "#FEF3C7",
+      "dateColor": "#D97706",
+      "icon": "users",
+      "iconBg": "#FEF3C7",
+      "iconColor": "#D97706",
+      "title": "Technical Coordinator",
+      "org": "Geeks_For_Geeks SRMCEM",
+      "description": "Organized technical events, workshops and webinars like Code Charades 3.0, Data Trail and GitHub Unleashed.",
+      "nodeColor": "#F59E0B",
+      "phase": "Gain Experience"
+    },
+    {
+      "id": "leadership",
+      "step": "04",
+      "date": "MAY 2025 – PRESENT",
+      "dateBg": "#F3E8FF",
+      "dateColor": "#7C3AED",
+      "icon": "crown",
+      "iconBg": "#EDE9FE",
+      "iconColor": "#7C3AED",
+      "title": "Technical Team Lead",
+      "org": "Geeks_For_Geeks SRMCEM",
+      "description": "Leading a cross-functional team, managing events, communications, website, registrations, payments and certificate automation.",
+      "nodeColor": "#7C3AED",
+      "phase": "Lead & Grow"
+    },
+    {
+      "id": "impact",
+      "step": "05",
+      "date": "OCT 2025 – PRESENT",
+      "dateBg": "#D1FAE5",
+      "dateColor": "#059669",
+      "icon": "target",
+      "iconBg": "#D1FAE5",
+      "iconColor": "#059669",
+      "title": "Event Management Lead",
+      "org": "AlgoZenith SRMCEM",
+      "description": "Organizing DSA contests and 10+ tech events at college/state level, in collaboration with GDG, GFG, AI Community and IEEE.",
+      "nodeColor": "#10B981",
+      "phase": "Create Impact"
+    }
+  ]
+}
