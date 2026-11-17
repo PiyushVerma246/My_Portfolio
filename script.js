@@ -41,6 +41,8 @@ const DevLoader = {
                 this.finish(true);
             });
         }
+        // Dismiss loader immediately on user tap/click anywhere
+        loader.addEventListener('click', () => this.finish(true), { once: true });
 
         const onKeyDown = (e) => {
             if (e.key === 'Escape' && !this.isComplete) {
@@ -56,7 +58,7 @@ const DevLoader = {
         const logEl = document.getElementById('dev-loader-log');
 
         const startTime = performance.now();
-        const duration = 1250; // snappy 1.25 seconds for crisp high-end feel
+        const duration = 520; // snappy 0.5s for instant responsive feel
 
         const tick = (now) => {
             if (this.isComplete) return;
@@ -93,10 +95,10 @@ const DevLoader = {
 
         this.rafId = window.requestAnimationFrame(tick);
 
-        // Failsafe watchdog: unlock page after 2.4s under any circumstance
+        // Failsafe watchdog: unlock page after 1.1s under any circumstance
         setTimeout(() => {
             if (!this.isComplete) this.finish(true);
-        }, 2400);
+        }, 1100);
     },
 
     completeSequence() {
@@ -114,10 +116,10 @@ const DevLoader = {
             logEl.style.color = '#FFFFFF';
         }
 
-        // Brief hold of 90ms to register 100% and initiate shutter aperture
+        // Brief hold of 30ms to register 100% and initiate shutter aperture
         setTimeout(() => {
             this.finish(false);
-        }, 90);
+        }, 30);
     },
 
     finish(instant = false) {
@@ -166,7 +168,7 @@ const DevLoader = {
                 const target = document.querySelector(window.location.hash);
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             }
-        }, 650);
+        }, 340);
     }
 };
 
@@ -223,10 +225,6 @@ function initScrollReveal() {
 
 document.addEventListener('DOMContentLoaded', () => {
     DevLoader.init();
-    try {
-        localStorage.removeItem('pv_navbar_collapsed');
-        document.body.classList.remove('nav-collapsed');
-    } catch (e) { }
     initScrollReveal();
     DataLoader.init();
     initAboutShowcase();
@@ -238,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initModalEvents();
     initExperienceInteractions();
     initVisibilityHandler();
-    initHangingIdCardTilt();
 });
 
 /* ==========================================================================
@@ -256,27 +253,48 @@ const DataLoader = {
     },
 
     async init() {
+        // Fast path: load cached data instantly to eliminate layout shifts
+        try {
+            const cachedAbout = JSON.parse(localStorage.getItem('pv_about_cache') || 'null');
+            const cachedProjects = JSON.parse(localStorage.getItem('pv_projects_cache') || 'null');
+            const cachedCerts = JSON.parse(localStorage.getItem('pv_certs_cache') || 'null');
+
+            if (cachedAbout && typeof AboutShowcase !== 'undefined') AboutShowcase.hydrate(cachedAbout);
+            if (cachedProjects && cachedProjects.projects) {
+                this.allProjects = cachedProjects.projects;
+                FeaturedProjectShowcase.init(this.allProjects);
+            }
+            if (cachedCerts && cachedCerts.items) {
+                this.allCertifications = cachedCerts.items;
+                CertSlider.init(cachedCerts);
+            }
+        } catch (_) {}
+
+        // Network update
         try {
             const [aboutData, projectsData, certsData] = await Promise.all([
-                fetch('data/about.json?v=black_powder_v9').then(r => r.ok ? r.json() : null).catch(() => null),
-                fetch('data/projects.json?v=black_powder_v9').then(r => r.ok ? r.json() : null).catch(() => null),
-                fetch('data/certifications.json?v=black_powder_v9').then(r => r.ok ? r.json() : null).catch(() => null)
+                fetch('data/about.json').then(r => r.ok ? r.json() : null).catch(() => null),
+                fetch('data/projects.json').then(r => r.ok ? r.json() : null).catch(() => null),
+                fetch('data/certifications.json').then(r => r.ok ? r.json() : null).catch(() => null)
             ]);
 
             if (aboutData && typeof AboutShowcase !== 'undefined') {
                 AboutShowcase.hydrate(aboutData);
+                try { localStorage.setItem('pv_about_cache', JSON.stringify(aboutData)); } catch (_) {}
                 await this.yieldToMain();
             }
 
             if (projectsData && projectsData.projects) {
                 this.allProjects = projectsData.projects;
                 FeaturedProjectShowcase.init(this.allProjects);
+                try { localStorage.setItem('pv_projects_cache', JSON.stringify(projectsData)); } catch (_) {}
                 await this.yieldToMain();
             }
 
             if (certsData && certsData.items) {
                 this.allCertifications = certsData.items;
                 CertSlider.init(certsData);
+                try { localStorage.setItem('pv_certs_cache', JSON.stringify(certsData)); } catch (_) {}
             }
         } catch (err) {
             console.error('Error loading portfolio datasets:', err);
@@ -682,7 +700,21 @@ function initExperienceInteractions() {
         }
     };
 
+    let isExperienceInView = false;
+    if ('IntersectionObserver' in window) {
+        const expObserver = new IntersectionObserver((entries) => {
+            isExperienceInView = entries.some(e => e.isIntersecting);
+            if (isExperienceInView && hasEnteredProximity) {
+                scheduleLayoutMeasure();
+            }
+        }, { rootMargin: '250px 0px' });
+        expObserver.observe(timeline);
+    } else {
+        isExperienceInView = true;
+    }
+
     const onScroll = () => {
+        if (!isExperienceInView) return;
         if (!scrollRafId) {
             scrollRafId = window.requestAnimationFrame(() => {
                 scrollRafId = null;
@@ -787,13 +819,6 @@ function initMobileMenu() {
             document.body.classList.remove('menu-open');
         });
     });
-}
-
-/* ==========================================================================
-   HORIZONTAL NAVBAR CONTROLLER
-   ========================================================================== */
-function initNavbarToggle() {
-    // Top horizontal navbar is active - no rail toggle needed
 }
 
 /* ==========================================================================
@@ -1264,9 +1289,6 @@ const FeaturedProjectShowcase = {
         }
     }
 };
-
-const ProjectSlider = FeaturedProjectShowcase;
-const ProjectGallery = FeaturedProjectShowcase;
 
 /* ==========================================================================
    360° 3D CYLINDRICAL SCROLL CAROUSEL CONTROLLER
@@ -1795,20 +1817,7 @@ const CertSlider = {
             let dragStartAngle = 0;
             let hasCaptured = false;
 
-            stage.addEventListener('pointerdown', (e) => {
-                if (this.items.length <= 1) return;
-                if (e.button && e.button !== 0) return;
-                if (e.target.closest('a') || e.target.closest('button')) return;
-
-                isDragging = true;
-                dragStartX = e.clientX;
-                dragStartAngle = this.targetAngle;
-                this.totalDragDist = 0;
-                hasCaptured = false;
-                clearTimeout(this.wheelSnapTimeout);
-            });
-
-            window.addEventListener('pointermove', (e) => {
+            const onPointerMove = (e) => {
                 if (!isDragging) return;
                 const dx = e.clientX - dragStartX;
                 this.totalDragDist = Math.abs(dx);
@@ -1826,12 +1835,15 @@ const CertSlider = {
                 }
                 this.targetAngle = nextTarget;
                 this.startLoop();
-            });
+            };
 
             const endDrag = (e) => {
                 if (!isDragging) return;
                 isDragging = false;
                 stage.classList.remove('is-dragging');
+                window.removeEventListener('pointermove', onPointerMove);
+                window.removeEventListener('pointerup', endDrag);
+                window.removeEventListener('pointercancel', endDrag);
 
                 if (hasCaptured) {
                     try { stage.releasePointerCapture?.(e.pointerId); } catch (_) {}
@@ -1848,8 +1860,22 @@ const CertSlider = {
                 }, 0);
             };
 
-            window.addEventListener('pointerup', endDrag);
-            window.addEventListener('pointercancel', endDrag);
+            stage.addEventListener('pointerdown', (e) => {
+                if (this.items.length <= 1) return;
+                if (e.button && e.button !== 0) return;
+                if (e.target.closest('a') || e.target.closest('button')) return;
+
+                isDragging = true;
+                dragStartX = e.clientX;
+                dragStartAngle = this.targetAngle;
+                this.totalDragDist = 0;
+                hasCaptured = false;
+                clearTimeout(this.wheelSnapTimeout);
+
+                window.addEventListener('pointermove', onPointerMove, { passive: true });
+                window.addEventListener('pointerup', endDrag);
+                window.addEventListener('pointercancel', endDrag);
+            });
         }
     },
 
@@ -1864,46 +1890,6 @@ const CertSlider = {
         }, 6000);
     }
 };
-
-/* ==========================================================================
-   HANGING ID CARD 3D TILT & NATURAL INTERACTION
-   ========================================================================== */
-function initHangingIdCardTilt() {
-    const card = document.getElementById('hanging-id-card');
-    const rig = document.getElementById('lanyard-rig');
-    if (!card || !rig) return;
-
-    let isHovered = false;
-
-    rig.addEventListener('mouseenter', () => {
-        isHovered = true;
-        card.style.animationPlayState = 'paused';
-        card.style.transition = 'transform 0.12s ease-out';
-    });
-
-    rig.addEventListener('mousemove', (e) => {
-        if (!isHovered) return;
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-
-        const rotateX = -(y / (rect.height / 2)) * 14;
-        const rotateY = (x / (rect.width / 2)) * 16;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(8px)`;
-    });
-
-    rig.addEventListener('mouseleave', () => {
-        isHovered = false;
-        card.style.transition = 'transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
-        card.style.transform = '';
-        setTimeout(() => {
-            if (!isHovered) {
-                card.style.animationPlayState = 'running';
-            }
-        }, 800);
-    });
-}
 
 /* ==========================================================================
    REACT BITS OPTION WHEEL SHOWCASE INITIALIZATION
@@ -1996,21 +1982,24 @@ function initOptionWheelShowcase() {
 function initSectionParticles() {
     if (typeof Particles !== 'function') return;
 
+    const isMobile = window.innerWidth < 768 || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+    const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+
     const baseConfig = {
         particleColors: ['#4B7691', '#5E8CA8', '#FFFFFF'],
-        particleCount: 180,
+        particleCount: isMobile ? 65 : 160,
         particleSpread: 10,
         speed: 0.1,
-        particleBaseSize: 100,
+        particleBaseSize: isMobile ? 80 : 100,
         sizeRandomness: 1,
         shape: 'circle',
-        glow: 0.55,
-        twinkle: 0.3,
+        glow: isMobile ? 0.35 : 0.55,
+        twinkle: 0.25,
         alphaParticles: false,
-        moveParticlesOnHover: true,
-        hoverEffect: 'parallax',
+        moveParticlesOnHover: !isCoarse,
+        hoverEffect: isCoarse ? 'none' : 'parallax',
         particleHoverFactor: 1,
-        clickBurst: true,
+        clickBurst: !isCoarse,
         cameraDistance: 20,
         disableRotation: false,
         intro: true,

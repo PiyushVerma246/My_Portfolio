@@ -923,6 +923,7 @@ body {
   opacity: 1;
   transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
   filter: blur(0px);
+  will-change: auto;
 }
 
 /* Right Telemetry Card in Section 01 Header */
@@ -2014,6 +2015,7 @@ body {
   opacity: 1;
   transform: perspective(1000px) rotateY(0deg) translate3d(0, 0, 0) scale(1);
   filter: blur(0px);
+  will-change: auto;
   transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3894,6 +3896,7 @@ body {
   opacity: 1;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0) translateY(0) scale(1);
   filter: blur(0px);
+  will-change: auto;
 }
 
 /* Asymmetric Two-Column Architectural Grid */
@@ -5460,6 +5463,7 @@ body:not(.is-loading) .navbar {
   opacity: 1;
   transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
   filter: blur(0px);
+  will-change: auto;
 }
 
 /* Open from Left variant (sliding and unfolding from left) */
